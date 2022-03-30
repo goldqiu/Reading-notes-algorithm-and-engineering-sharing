@@ -126,7 +126,7 @@ https://www.runoob.com/linux/linux-system-contents.html
 
 5. 建图（Mapping）。它根据估计的轨迹，建立与任务要求对应的地图。
 
-![视觉SLAM十四讲-1](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-1.png)
+![视觉SLAM十四讲-1](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-1.png)
 
 #### 视觉里程计
 
@@ -194,15 +194,15 @@ vk,j是这次观测里的噪声。
 
 假设机器人在平面中运动，那么，它的位姿由两个位置和一个转角来描述，x1, x2 是两个轴上的位置而 θ 为转角，即
 
-![视觉SLAM十四讲-2](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-2.jpg)
+![视觉SLAM十四讲-2](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-2.jpg)
 
 输入的指令是两个时间间隔位置和转角的变化量：
 
-![视觉SLAM十四讲-3](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-3.jpg)
+![视觉SLAM十四讲-3](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-3.jpg)
 
 此时运动方程：
 
-![视觉SLAM十四讲-4](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-4.jpg)
+![视觉SLAM十四讲-4](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-4.jpg)
 
 并不是所有的输入指令都是位移和角度的变化量，比如“油门”或者 “控制杆”的输入就是速度或加速度量，存在着其他形式更加复杂的运动方程，我们需要进行动力学分析。关于观测方程，比方说机器人携带着一个二维激光传感器。我们知道激光传感器观测一个2D路标点时，能够测到两个量：路标点与机器人本体之间的距离 r 和夹角 ϕ。
 
@@ -210,25 +210,25 @@ vk,j是这次观测里的噪声。
 
 记路标点为
 
-![视觉SLAM十四讲-5](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-5.jpg)
+![视觉SLAM十四讲-5](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-5.jpg)
 
 位姿为
 
-![视觉SLAM十四讲-6](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-6.jpg)
+![视觉SLAM十四讲-6](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-6.jpg)
 
 观测数据为
 
-![视觉SLAM十四讲-7](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-7.jpg)
+![视觉SLAM十四讲-7](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-7.jpg)
 
 那么观测方程就为：
 
-![视觉SLAM十四讲-8](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-8.jpg)
+![视觉SLAM十四讲-8](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-8.jpg)
 
 考虑视觉 SLAM 时，传感器是相机，那么观测方程就是“对路标点拍摄后，得到了图像中的像素”的过程。 针对不同的传感器，这两个方程有不同的参数化形式。
 
 取成通用的抽象形式，SLAM过程可总结为两个基本方程：
 
-![视觉SLAM十四讲-9](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-9.jpg)
+![视觉SLAM十四讲-9](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-9.jpg)
 
 这两个方程描述了最基本的SLAM问题：当我们知道运动测量的读数u，以及传感器的读数z 时，如何求解定位问题（估计x）和建图问题（估计y）？这时，我们把 SLAM 问题建模成了一个状态估计问题：如何通过带有噪声的测量数据，估计内部的、隐藏着的状态变量？
 
@@ -393,43 +393,43 @@ https://www.jetbrains.com/idea/buy/#discounts?billing=yearly
 
 选择For students and teachers下的 learn more
 
-![视觉SLAM十四讲-10](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-10.jpg)
+![视觉SLAM十四讲-10](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-10.jpg)
 
 点击APPLY NOW
 
-![视觉SLAM十四讲-11](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-11.jpg)
+![视觉SLAM十四讲-11](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-11.jpg)
 
 输入学生邮箱，验证完成后 他会发验证链接到邮箱，打开邮箱内链接，注册JBA
 
 在注册JBA时候还需要你输入一个邮箱，这个时候就用自己的常用邮箱就可以了。
 
-![视觉SLAM十四讲-12](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-12.jpg)
+![视觉SLAM十四讲-12](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-12.jpg)
 
 注册成功如下：
 
-![视觉SLAM十四讲-13](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-13.jpg)
+![视觉SLAM十四讲-13](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-13.jpg)
 
 回到开始的窗口 ，激活CLion
 
-![视觉SLAM十四讲-18](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-18.jpg)
+![视觉SLAM十四讲-18](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-18.jpg)
 
 **现在是调试cmakelists项目：**
 
 打开cmakelists文件，导入项目
 
-![视觉SLAM十四讲-14](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-14.jpg)
+![视觉SLAM十四讲-14](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-14.jpg)
 
 需要选择你要debug的源文件和工作路径
 
-![视觉SLAM十四讲-15](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-15.jpg)
+![视觉SLAM十四讲-15](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-15.jpg)
 
 将编译输出可执行文件路径选好：
 
-![视觉SLAM十四讲-16](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-16.jpg)
+![视觉SLAM十四讲-16](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-16.jpg)
 
 可以开始调试了：
 
-![视觉SLAM十四讲-17](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-17.jpg)
+![视觉SLAM十四讲-17](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-17.jpg)
 
 ##### **Kdevelop ：**
 
@@ -515,7 +515,7 @@ https://github.com/TheErk/CMake-tutorial
 
 **向量：**把两个点连接起来，就构成了向量。向量可以看成从某点指向另一点的一个箭头。不要把向量与它的坐标两个概念混淆。一个向量是空间当中的一样东西，并不需要和若干个实数相关联的。只有当我们指定这个三维空间中的某个坐标系时，才可以谈论该向量在此坐标系下的坐标，也就是找到若干个实数对应这个向量。（就是向量没有坐标系也在那，有了坐标系向量就有了坐标）
 
-用线性代数的知识来说，三维空间中的某个点的坐标也可以用R3来描述。假设在这个线性空间内，有该空间的一组基 (e1,e2,e3)，那么，任意向量a在这组基下就有一个坐标，这里 (a1,a2,a3)T 称为a在此基下的坐标。公式如下：                                          ![视觉SLAM十四讲-19](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-19.png)          
+用线性代数的知识来说，三维空间中的某个点的坐标也可以用R3来描述。假设在这个线性空间内，有该空间的一组基 (e1,e2,e3)，那么，任意向量a在这组基下就有一个坐标，这里 (a1,a2,a3)T 称为a在此基下的坐标。公式如下：                                          ![视觉SLAM十四讲-19](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-19.png)          
 
 注：1.这里基就是张成这个空间的一组线性无关的向量。
 
@@ -527,7 +527,7 @@ https://github.com/TheErk/CMake-tutorial
 
 公式如下：
 
-![视觉SLAM十四讲-20](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-20.png)
+![视觉SLAM十四讲-20](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-20.png)
 
 注：也可以描述向量间的投影关系。<a,b>指向量间夹角。
 
@@ -535,7 +535,7 @@ https://github.com/TheErk/CMake-tutorial
 
 外积的结果是一个向量，它的方向垂直于这两个向量，大小为 |a||b|sin⟨a,b⟩，是两个向量张成的四边形的有向面积。
 
-![视觉SLAM十四讲-21](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-21.png)
+![视觉SLAM十四讲-21](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-21.png)
 
 对于外积运算，我们引入∧符号，把a写成一个矩阵，事实上是一个反对称矩阵（Skew-symmetric matrix），你可以将 ∧记成一个反对称符号。这样就把外积a × b写成了矩阵与向量的乘法a∧b，把它变成了线性运算。这意味着任意向量都对应着唯一的一个反对称矩阵，反之亦然。
 
@@ -551,21 +551,21 @@ https://github.com/TheErk/CMake-tutorial
 
 欧氏变换由旋转和平移组成。首先考虑旋转，设某个单位正交基 (e1, e2, e3) 经过一次旋转变成了 (e1', e2', e3') ，那么，对于同一个向量 a（该向量并没有随着坐标系的旋转而发生运动），它在两个坐标系下的坐标为[a1, a2, a3]T和[a1', a2', a3']T。因为向量本身没变，根据坐标的定义，有：
 
-![视觉SLAM十四讲-22](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-22.png)
+![视觉SLAM十四讲-22](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-22.png)
 
 为了描述两个坐标之间的关系，我们对上述等式的左右两边同时左乘
 
-![视觉SLAM十四讲-23](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-23.png)
+![视觉SLAM十四讲-23](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-23.png)
 
 那么左边的系数就变成了单位矩阵，把中间的矩阵拿出来，定义成一个矩阵R。
 
-![视觉SLAM十四讲-24](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-24.jpg)
+![视觉SLAM十四讲-24](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-24.jpg)
 
 这个矩阵由两组基之间的内积组成，刻画了旋转前后同一个向量的坐标变换关系。只要旋转是一样的，那么这个矩阵也是一样的。可以说，矩阵R描述了旋转本身。因此称为旋转矩阵（Rotation matrix）。该矩阵各分量是两个坐标系基的内积，由于基向量的长度为1，所以实际上是各基向量的夹角之余弦。所以这个矩阵也叫方向余弦矩阵（Direction Cosine matrix）。
 
 旋转矩阵有一些特别的性质。它是一个行列式为1的正交矩阵。反之，行列式为1的正交矩阵也是一个旋转矩阵。以把 n 维旋转矩阵的集合定义如下：
 
-![视觉SLAM十四讲-25](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-25.png)
+![视觉SLAM十四讲-25](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-25.png)
 
 SO(n) 是特殊正交群（Special Orthogonal Group）的意思。这个集合由n维空间的旋转矩阵组成，特别地，SO(3) 就是指三维空间的旋转。通过旋转矩阵，我们可以直接谈论两个坐标系之间的旋转变换，而不用再从基开始谈起。
 
@@ -591,7 +591,7 @@ R12 是指把坐标系2的向量变换到坐标系1中。同理，如果我们�
 
 上面的变换关系不是一个线性关系。这样的形式在变换多次之后会显得很繁杂。因此，我们引入齐次坐标和变换矩阵，
 
-![视觉SLAM十四讲-26](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-26.jpg)
+![视觉SLAM十四讲-26](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-26.jpg)
 
 这是一个数学技巧：我们在一个三维向量的末尾添加 1，将其变成了四维向量，称为齐次坐标。对于这个四维向量，我们可以把旋转和平移写在一个矩阵里面，使得整个关系变成线性关系。该式中，矩阵T称为变换矩阵（Transform Matrix）。依靠齐次坐标和变换矩阵，两次变换的叠加就可以有很好的形式：
 
@@ -599,11 +599,11 @@ b = T1a, c = T2b ⇒ c = T2T1a.
 
 变换矩阵T具有比较特别的结构：左上角为旋转矩阵，右侧为平移向量，左下角为0 向量，右下角为 1。这种矩阵又称为特殊欧氏群（Special Euclidean Group）：
 
-![视觉SLAM十四讲-27](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-27.png)
+![视觉SLAM十四讲-27](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-27.png)
 
 与 SO(3) 一样，求解该矩阵的逆表示一个反向的变换：
 
-![视觉SLAM十四讲-28](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-28.jpg)
+![视觉SLAM十四讲-28](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-28.jpg)
 
 同样，我们用T12 这样的写法来表示从2到1的变换。
 
@@ -674,15 +674,15 @@ http://eigen.tuxfamily.org/dox-devel/modules.html
 
 从旋转向量到旋转矩阵的转换过程由罗德里格斯公式（Rodrigues’s Formula ）表明，转换的结果 ：
 
-![视觉SLAM十四讲-29](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-29.jpg)
+![视觉SLAM十四讲-29](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-29.jpg)
 
 符号∧是向量到反对称矩阵的转换符。反之，我们也可以计算从一个旋转矩阵到旋转向量的转换。对于转角 θ，取两边的迹，有
 
-![视觉SLAM十四讲-30](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-30.jpg)
+![视觉SLAM十四讲-30](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-30.jpg)
 
 得：
 
-![视觉SLAM十四讲-31](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-31.png)
+![视觉SLAM十四讲-31](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-31.png)
 
 关于转轴n，由于旋转轴上的向量在旋转后不发生改变，说明： 
 
@@ -744,7 +744,7 @@ q = q0 + q1i + q2j + q3k,
 
 其中i,j,k为四元数的三个虚部。这三个虚部满足以下关系式：
 
-![视觉SLAM十四讲-32](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-32.jpg)
+![视觉SLAM十四讲-32](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-32.jpg)
 
 如果把i,j,k看成三个坐标轴，那么它们与自己的乘法和复数一样，相互之间的乘法和外积一样。有时人们也用一个标量和一个向量来表达四元数：
 
@@ -774,41 +774,41 @@ qa ± qb = [sa ± sb,va ± vb]T
 
 2. 乘法是把qa 的每一项与qb 的每项相乘，最后相加。整理可得：
 
-![视觉SLAM十四讲-33](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-33.jpg)
+![视觉SLAM十四讲-33](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-33.jpg)
 
 写成向量形式并利用内外积运算：
 
-![视觉SLAM十四讲-34](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-34.jpg)
+![视觉SLAM十四讲-34](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-34.jpg)
 
 在该乘法定义下，两个实的四元数乘积仍是实的，这与复数也是一致的。然而，注意到，由于最后一项外积的存在，四元数乘法通常是不可交换的，除非va 和vb 在R3 中共线，此时外积项为零。
 
 3. 四元数的模长定义为
 
-![视觉SLAM十四讲-35](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-35.jpg)
+![视觉SLAM十四讲-35](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-35.jpg)
 
 两个四元数乘积的模即为模的乘积。这使得单位四元数相乘后仍是单位四元数。
 
-![视觉SLAM十四讲-36](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-36.jpg)
+![视觉SLAM十四讲-36](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-36.jpg)
 
 4. 共轭四元数的共轭是把虚部取成相反数：
 
-![视觉SLAM十四讲-37](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-37.jpg)
+![视觉SLAM十四讲-37](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-37.jpg)
 
 四元数共轭与其本身相乘，会得到一个实四元数，其实部为模长的平方：
 
-![视觉SLAM十四讲-38](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-38.jpg)
+![视觉SLAM十四讲-38](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-38.jpg)
 
 5. 一个四元数的逆为
 
-![视觉SLAM十四讲-39](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-39.png)
+![视觉SLAM十四讲-39](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-39.png)
 
 按此定义，四元数和自己的逆的乘积为实四元数1：
 
-![视觉SLAM十四讲-40](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-40.png)
+![视觉SLAM十四讲-40](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-40.png)
 
 如果q为单位四元数，其逆和共轭就是同一个量。同时，乘积的逆和矩阵有相似的性质：
 
-![视觉SLAM十四讲-42](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-42.png)
+![视觉SLAM十四讲-42](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-42.png)
 
 6. 数乘
 
@@ -830,47 +830,47 @@ qa ± qb = [sa ± sb,va ± vb]T
 
 任意单位四元数描述了一个旋转，该旋转亦可用旋转矩阵或旋转向量描述。四元数乘法也可以写成一种矩阵的乘法。设q = [s,v]T，那么，定义如下的符号 + 和 ⊕ 为：
 
-​	![视觉SLAM十四讲-43](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-43.png)
+​	![视觉SLAM十四讲-43](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-43.png)
 
 这两个符号将四元数映射成为一个 4×4 的矩阵。于是四元数乘法可以写成矩阵的形式：
 
-![视觉SLAM十四讲-44](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-44.png)
+![视觉SLAM十四讲-44](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-44.png)
 
 同理：
 
-![视觉SLAM十四讲-45](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-45.png)
+![视觉SLAM十四讲-45](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-45.png)
 
 考虑使用四元数对空间点进行旋转的问题。有：
 
-![视觉SLAM十四讲-46](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-46.png)
+![视觉SLAM十四讲-46](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-46.png)
 
 代入两个符号对应的矩阵，得：
 
-![视觉SLAM十四讲-47](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-47.png)
+![视觉SLAM十四讲-47](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-47.png)
 
 因为p′和p都是虚四元数，那么事实上该矩阵的右下角即给出了从四元数到旋转矩阵的变换关系：
 
-![视觉SLAM十四讲-48](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-48.png)
+![视觉SLAM十四讲-48](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-48.png)
 
 对上式两侧求迹，得：
 
-![视觉SLAM十四讲-49](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-49.png)
+![视觉SLAM十四讲-49](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-49.png)
 
 由：
 
-![视觉SLAM十四讲-50](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-50.png)
+![视觉SLAM十四讲-50](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-50.png)
 
 得：
 
-![视觉SLAM十四讲-53](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-53.png)
+![视觉SLAM十四讲-53](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-53.png)
 
 所以：
 
-![视觉SLAM十四讲-51](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-51.png)
+![视觉SLAM十四讲-51](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-51.png)
 
 总之，四元数到旋转向量的转换公式可列写如下：
 
-![视觉SLAM十四讲-52](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-52.png)
+![视觉SLAM十四讲-52](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-52.png)
 
 在实际编程中，程序库通常会为我们准备好各种形式之间的转换。无论是四元数、旋转矩阵还是轴角，它们都可以用来描述同一个旋转。我们应该在实际中选择最为方便的形式。
 
@@ -882,7 +882,7 @@ qa ± qb = [sa ± sb,va ± vb]T
 
 相似变换比欧氏变换多了一个自由度，它允许物体进行均匀缩放，其矩阵表示为：
 
-![视觉SLAM十四讲-54](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-54.png)
+![视觉SLAM十四讲-54](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-54.png)
 
 旋转部分多了一个缩放因子s，表示我们在对向量旋转之后，可以在 x,y,z 三个坐标上进行均匀缩放。由于含有缩放，相似变换不再保持图形的面积不变。可以想象一个边长为1的立方体通过相似变换后，变成边长为10的样子（但仍然是立方体）。三维相似变换的集合也叫做相似变换群，记作Sim(3)。
 
@@ -890,7 +890,7 @@ qa ± qb = [sa ± sb,va ± vb]T
 
 仿射变换的矩阵形式如下：
 
-![视觉SLAM十四讲-55](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-55.png)
+![视觉SLAM十四讲-55](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-55.png)
 
 与欧氏变换不同的是，仿射变换只要求A是一个可逆矩阵，而不必是正交矩阵。仿射变换也叫正交投影。经过仿射变换之后，立方体就不再是方的了，但是各个面仍然是平行四边形。
 
@@ -898,13 +898,13 @@ qa ± qb = [sa ± sb,va ± vb]T
 
 射影变换是最一般的变换，它的矩阵形式为：
 
-![视觉SLAM十四讲-56](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-56.png)
+![视觉SLAM十四讲-56](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-56.png)
 
 左上角为可逆矩阵A，右上角为平移t，左下角为缩放a。由于采用了齐次坐标，当 v≠0时，我们可以对整个矩阵除以 v 得到一个右下角为 1 的矩阵；否则得到右下角为 0 的矩阵。因此，2D 的射影变换一共有 8 个自由度，3D 则共有 15 个自由度。射影变换是变换中，形式最为一般的。从真实世界到相机照片的变换可以看成一个射影变换。可以想象一个原本方形的地板砖，在照片当中是什么样子：首先，它不再是方形的。由于近大远小的关系，它甚至不是平行四边形，而是一个不规则的四边形。
 
 **总结：**在“不变性质”中，从上到下是有包含关系的。例如，欧氏变换除了保体积之外，也具有保平行、相交等性质。
 
-![视觉SLAM十四讲-57](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-57.png)
+![视觉SLAM十四讲-57](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-57.png)
 
 从真实世界到相机照片的变换是一个射影变换。如果相机的焦距为无穷远，那么这个变换为仿射变换。
 
@@ -962,7 +962,7 @@ time,tx,ty,tz,qx,qy,qz,qw, 把它画到一个窗口中。
 
 在画轨迹的时候，可以把“轨迹”画成一系列点组成的序列。这其实是机器人（相机）坐标系的原点在世界坐标系中的坐标。考虑机器人坐标系的原点，即OR，那么，此时的OW就是这个原点在世界坐标系下的坐标：
 
-![视觉SLAM十四讲-60](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-60.png)
+![视觉SLAM十四讲-60](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-60.png)
 
 OW正是TWR 的平移部分。因此，可以从TWR中直接看到相机在何处，这是TWR更为直观的原因。在可视化程序里，轨迹文件存储了TWR而不是TRW。
 
@@ -1038,13 +1038,13 @@ cmake ..
 
 程序运行结果：
 
-![视觉SLAM十四讲-58](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-58.png)
+![视觉SLAM十四讲-58](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-58.png)
 
 #### 3.7.2 显示相机的位姿
 
 slambook2/ch3/visualizeGeometry 中，以可视化的形式演示了相机位姿的各种表达方式。用鼠标操作相机时，左侧的方框里会实时显示相机位姿对应的旋转矩阵、平移、欧拉角和四元数。效果如下：
 
-![视觉SLAM十四讲-59](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-59.png)
+![视觉SLAM十四讲-59](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-59.png)
 
 ### 习题
 
@@ -1106,57 +1106,57 @@ slambook2/ch3/visualizeGeometry 中，以可视化的形式演示了相机位姿
 
 考虑任意旋转矩阵 R，满足：
 
-![视觉SLAM十四讲-61](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-61.png)
+![视觉SLAM十四讲-61](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-61.png)
 
 假设R是某个相机的旋转，它会随时间连续地变化，即为时间的函数：R(t)。有：
 
-![视觉SLAM十四讲-62](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-62.png)
+![视觉SLAM十四讲-62](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-62.png)
 
 等式两边对时间求导，得到：
 
-![视觉SLAM十四讲-63](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-63.png)
+![视觉SLAM十四讲-63](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-63.png)
 
 整理得：
 
-![视觉SLAM十四讲-64](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-64.png)
+![视觉SLAM十四讲-64](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-64.png)
 
 可以看出
 
-![视觉SLAM十四讲-65](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-65.png)
+![视觉SLAM十四讲-65](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-65.png)
 
 是一个反对称矩阵。
 
 而叉积引入了∧符号，将一个向量变成了反对称矩阵。同理，对于任意反对称矩阵，我们亦能找到一个与之对应的向量。把这个运算用符号∨表示。如下：
 
-![视觉SLAM十四讲-66](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-66.png)
+![视觉SLAM十四讲-66](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-66.png)
 
 由于
 
-![视觉SLAM十四讲-65](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-65.png)
+![视觉SLAM十四讲-65](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-65.png)
 
 是一个反对称矩阵，我们可以找到一个三维向量 ϕ(t) ∈ R3 与之对应：
 
-![视觉SLAM十四讲-67](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-67.png)
+![视觉SLAM十四讲-67](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-67.png)
 
 等式两边右乘 R(t)，由于R为正交阵，有：
 
-![视觉SLAM十四讲-68](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-68.png)
+![视觉SLAM十四讲-68](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-68.png)
 
 每对旋转矩阵求一次导数，只需左乘一个 ϕ(t)∧矩阵（反对称矩阵）即可。
 
 考虑 t0 = 0 时刻，设此时旋转矩阵为 R(0) = I。按照导数定义，可以把R(t) 在 t = 0 附近进行一阶泰勒展开：
 
-![视觉SLAM十四讲-69](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-69.png)
+![视觉SLAM十四讲-69](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-69.png)
 
 ϕ反映了R的导数性质，故称它在SO(3)原点附近的正切空间(Tangent Space)上。
 
 同时在 t0 附近，设ϕ(t0) = ϕ0，有
 
-![视觉SLAM十四讲-70](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-70.png)
+![视觉SLAM十四讲-70](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-70.png)
 
 求解关于R的微分方程，有初始值 R(0) = I，得：
 
-![视觉SLAM十四讲-71](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-71.png)
+![视觉SLAM十四讲-71](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-71.png)
 
 说明在 t = 0 附近，旋转矩阵可以由 exp (ϕ0∧t)计算出来，即旋转矩阵 R 与另一个反对称矩阵 ϕ0∧t 通过指数关系发生了联系。
 
@@ -1184,7 +1184,7 @@ slambook2/ch3/visualizeGeometry 中，以可视化的形式演示了相机位姿
 
 ϕ是一种李代数。SO(3)对应的李代数是定义在R3上的向量，我们记作ϕ。每个ϕ都可以生成一个反对称矩阵：
 
-![视觉SLAM十四讲-72](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-72.png)
+![视觉SLAM十四讲-72](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-72.png)
 
 在此定义下，两个向量 ϕ1, ϕ2 的李括号为： [ϕ1, ϕ2] = (Φ1Φ2 − Φ2Φ1) ∨ 
 
@@ -1192,17 +1192,17 @@ slambook2/ch3/visualizeGeometry 中，以可视化的形式演示了相机位姿
 
 李代数是一个由三维向量组成的集合，每个向量对应到一个反对称矩阵，可以用于表达旋转矩阵的导数。 它与 SO(3) 的关系由指数映射给定：
 
-![视觉SLAM十四讲-73](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-73.png)
+![视觉SLAM十四讲-73](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-73.png)
 
 #### 4.1.5李代数se(3)
 
 与so(3)相似，se(3)位于R6空间中。
 
-![视觉SLAM十四讲-74](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-74.png)
+![视觉SLAM十四讲-74](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-74.png)
 
 把每个se(3)元素记作ξ，它是一个六维向量。前三维为平移，记作ρ；后三维为旋转，记作ϕ，实质上是so(3)元素。同时拓展了∧符号的含义，在se(3)中，同样使用∧符号，将一个六维向量转换成四维矩阵，但这里不再表示反对称。
 
-![视觉SLAM十四讲-75](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-75.png)
+![视觉SLAM十四讲-75](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-75.png)
 
 即仍使用∧和∨符号来指代“从向量到矩阵”和“从矩阵到向量”的关系，以保持和so(3)的一致性。可以简单地把se(3)理解成“由一个平移加上一个so(3)元素构成的向量”。 
 
@@ -1214,21 +1214,21 @@ exp(ϕ∧)如何计算？它是一个矩阵的指数，在李群和李代数中�
 
 任意矩阵的指数映射可以写成一个泰勒展开，但是只有在收敛的情况下才会有结果，其结果仍是一个矩阵。
 
-![视觉SLAM十四讲-76](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-76.png)
+![视觉SLAM十四讲-76](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-76.png)
 
 同样地，对so(3)中任意一元素ϕ，也定义它的指数映射：
 
-![视觉SLAM十四讲-77](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-77.png)
+![视觉SLAM十四讲-77](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-77.png)
 
 由于ϕ是三维向量，我定义它的模长和它的方向，分别记作θ和a，于是有 ϕ = θa。这里a是一个长度为1的方向向量。首先，对于a∧，有以下两条性质：
 
-![视觉SLAM十四讲-78](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-78.png)
+![视觉SLAM十四讲-78](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-78.png)
 
-![视觉SLAM十四讲-79](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-79.png)
+![视觉SLAM十四讲-79](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-79.png)
 
 这提供了处理 a∧高阶项的方法。利用这两个性质，可以得到一个式子：
 
-![视觉SLAM十四讲-80](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-80.png)
+![视觉SLAM十四讲-80](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-80.png)
 
 这和罗德里格斯公式如出一辄。
 
@@ -1242,17 +1242,17 @@ SO(3)与so(3)的结论和前面讲的旋转向量与旋转矩阵很相似，而�
 
 se(3) 上的指数映射形式如下：
 
-![视觉SLAM十四讲-81](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-81.png)
+![视觉SLAM十四讲-81](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-81.png)
 
 照着so(3)上的做法推导，把exp进行泰勒展开推导此式，得
 
-![视觉SLAM十四讲-82](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-82.png)
+![视觉SLAM十四讲-82](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-82.png)
 
 该式与罗德里格斯有些相似。平移部分经过指数映射之后，发生了一次以J为系数矩阵的线性变换。
 
 李群、李代数的定义与相互的转换关系，总结如图所示：
 
-![视觉SLAM十四讲-83](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-83.png)
+![视觉SLAM十四讲-83](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-83.png)
 
 ### 4.3 李代数求导与扰动模型
 
@@ -1260,7 +1260,7 @@ se(3) 上的指数映射形式如下：
 
 使用李代数的一大目的是进行优化，在优化过程中导数是非常必要的信息。考虑一个问题，当在SO(3)中完成两个矩阵乘法时，李代数中so(3)上发生了什么改变？反过来说，当so(3)上做两个李代数的加法时，SO(3)上是否对应着两个矩阵的乘积？如果成立，相当于：
 
- ![视觉SLAM十四讲-84](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-84.jpg)
+ ![视觉SLAM十四讲-84](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-84.jpg)
 
 如果ϕ1,ϕ2为标量，显然该式成立；但此处计算的是矩阵的指数函数，而非标量的指数。
 
@@ -1270,43 +1270,43 @@ ln(exp(A)exp(B)) = A + B  (这个式子有些问题)
 
 该式在矩阵时并不成立。两个李代数指数映射乘积的完整形式，由 Baker-Campbell-Hausdorff公式（BCH公式）出。
 
- ![视觉SLAM十四讲-85](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-85.jpg)
+ ![视觉SLAM十四讲-85](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-85.jpg)
 
 其中 [] 为李括号。
 
 BCH 公式说明，当处理两个矩阵指数之积时，它们会产生一些由李括号组成的余项。特别地，考虑SO(3)上的李代数，当ϕ1或ϕ2为小量时，小于二次以上的项都可以被忽略掉。此时，BCH拥有线性近似表达 ：
 
- ![视觉SLAM十四讲-86](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-86.jpg)
+ ![视觉SLAM十四讲-86](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-86.jpg)
 
 以第一个近似为例。该式说明，当对一个旋转矩阵R2（李代数为ϕ2）左乘一个微小旋转矩阵R1（李代数为ϕ1）时，可以近似地看作，在原有的李代数ϕ2上加上了一项Jl(ϕ2)−1ϕ1。同理，第二个近似描述了右乘一个微小位移的情况。于是，李代数在BCH近似下，分成了左乘近似和右乘近似两种，在使用时我们须注意使用的是左乘模型还是右乘模型。 
 
 左乘 BCH 近似雅可比 
 
-![视觉SLAM十四讲-87](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-87.jpg)
+![视觉SLAM十四讲-87](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-87.jpg)
 
 它的逆为：
 
-![视觉SLAM十四讲-88](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-88.jpg)
+![视觉SLAM十四讲-88](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-88.jpg)
 
 右乘雅可比仅需要对自变量取负号即可：
 
-![视觉SLAM十四讲-89](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-89.jpg)
+![视觉SLAM十四讲-89](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-89.jpg)
 
 **BCH近似的意义：**假定对某个旋转R，对应的李代数为ϕ。我们给它左乘一个微小旋转，记作∆R，对应的李代数为∆ϕ。那么，在李群上，得到的结果就是∆R·R，而在李代数上，根据BCH近似，为
 
-![视觉SLAM十四讲-90](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-90.jpg)
+![视觉SLAM十四讲-90](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-90.jpg)
 
 合并起来，可以写成：
 
- ![视觉SLAM十四讲-91](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-91.jpg)
+ ![视觉SLAM十四讲-91](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-91.jpg)
 
 反之，如果我们在李代数上进行加法，让一个ϕ加上 ∆ϕ，可以近似为李群上的左右雅可比的乘法：
 
- ![视觉SLAM十四讲-92](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-92.jpg)
+ ![视觉SLAM十四讲-92](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-92.jpg)
 
 这为在李代数上做微积分提供了理论基础。同样，对于SE(3)，亦有类似的BCH近似：
 
-​    ![视觉SLAM十四讲-93](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-93.jpg)
+​    ![视觉SLAM十四讲-93](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-93.jpg)
 
 这里的左右雅可比形式比较复杂，是一个6×6的矩阵，可以参考文献[6]。
 
@@ -1326,7 +1326,7 @@ e =z−Tp.
 
 假设一共有N个这样的路标点和观测，于是就有N个上式。那么，对机器人的位姿估计，相当于是寻找一个最优的T，使得整体误差最小化：
 
- ![视觉SLAM十四讲-94](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-94.jpg)
+ ![视觉SLAM十四讲-94](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-94.jpg)
 
 求解此问题，需要计算目标函数J关于变换矩阵T的导数。
 
@@ -1344,15 +1344,15 @@ e =z−Tp.
 
 考虑SO(3)上的情况。假设对一个空间点p进行了旋转，得到了Rp。计算旋转之后点的坐标相对于旋转的导数，记为 ：
 
- ![视觉SLAM十四讲-95](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-95.jpg)
+ ![视觉SLAM十四讲-95](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-95.jpg)
 
 由于SO(3)没有加法，所以该导数无法按照导数的定义进行计算。设R对应的李代数为ϕ，转而计算 ：
 
- ![视觉SLAM十四讲-96](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-96.jpg)
+ ![视觉SLAM十四讲-96](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-96.jpg)
 
 按照导数的定义，推导出了旋转后的点相对于李代数的导数：
 
- ![视觉SLAM十四讲-97](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-97.jpg)
+ ![视觉SLAM十四讲-97](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-97.jpg)
 
 注：这里并不能按照矩阵微分来定义导数，只是一个记号。
 
@@ -1360,7 +1360,7 @@ e =z−Tp.
 
 另一种求导方式是对R进行一次扰动∆R，看结果相对于扰动的变化率。这个扰动可以乘在左边也可以乘在右边，最后结果会有一点微小的差异。以左扰动为例，设左扰动∆R对应的李代数为φ。对φ求导，即：
 
- ![视觉SLAM十四讲-98](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-98.jpg)
+ ![视觉SLAM十四讲-98](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-98.jpg)
 
 相比于直接对李代数求导，省去了一个雅可比矩阵的计算。这使得扰动模型更为实用，在位姿估计当中具有重要的意义。
 
@@ -1368,7 +1368,7 @@ e =z−Tp.
 
 书中只给出SE(3)上的扰动模型。假设某空间点p经过一次变换T（对应李代数为ξ），得到Tp 。给T左乘一个扰动∆T = exp(δξ∧)，设扰动项的李代数为 δξ = [δρ,δϕ]T，那么：
 
- ![视觉SLAM十四讲-99](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-99.jpg)
+ ![视觉SLAM十四讲-99](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-99.jpg)
 
 把最后的结果定义成一个算符 ，它把一个齐次坐标的空间点变换成一个4×6的矩阵。
 
@@ -1459,7 +1459,7 @@ https://github.com/fmtlib/fmt.git
 
 程序运行结果：
 
-![视觉SLAM十四讲-106](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-106.jpg)
+![视觉SLAM十四讲-106](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-106.jpg)
 
 
 
@@ -1469,25 +1469,25 @@ https://github.com/fmtlib/fmt.git
 
 如果在单目SLAM中使用 SE(3) 表示位姿，那么由于尺度不确定性与尺度漂移，整个 SLAM 过程中的尺度会发生变化，这在 SE(3) 中未能体现出来。因此，在单目情况下一般会显式地把尺度因子表达出来。用数学语言来说，对于位于空间的点p，在相机坐标系下要经过一个相似变换，而非欧氏变换：
 
-![视觉SLAM十四讲-100](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-100.jpg)
+![视觉SLAM十四讲-100](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-100.jpg)
 
 在相似变换中，把尺度s表达了出来。它同时作用在p的3个坐标之上，对p进行了一次缩放。与 SO(3)、SE(3) 相似，相似变换亦对矩阵乘法构成群，称为相似变换群 Sim(3)：
 
-![视觉SLAM十四讲-101](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-101.jpg)
+![视觉SLAM十四讲-101](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-101.jpg)
 
 同样地，Sim(3) 也有对应的李代数、指数映射、对数映射等。李代数 sim(3) 元素是一个7维向量ζ。它的前 6 维与 se(3) 相同，最后多了一项 σ。
 
-![视觉SLAM十四讲-104](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-104.jpg)
+![视觉SLAM十四讲-104](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-104.jpg)
 
 关联Sim(3)和sim(3)的仍是指数映射和对数映射。指数映射为：
 
-![视觉SLAM十四讲-103](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-103.jpg)
+![视觉SLAM十四讲-103](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-103.jpg)
 
 通过指数映射，能够找到李代数与李群的关系。对于李代数ζ，它与李群的对应关系为：
 
- ![视觉SLAM十四讲-102](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-102.jpg)
+ ![视觉SLAM十四讲-102](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-102.jpg)
 
-![视觉SLAM十四讲-105](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-105.jpg)
+![视觉SLAM十四讲-105](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-105.jpg)
 
 旋转部分和 SO(3) 是一致的。平移部分，在 se(3) 中需要乘一个雅可比J，而相似变换的雅可比更复杂一些。对于尺度因子，可以看到李群中的 s 即为李代数中 σ 的指数函数。
 
@@ -1544,47 +1544,47 @@ Sim(3) 的 BCH 近似与 SE(3) 是类似的。可以讨论一个点p经过相似
 
 初中物理的蜡烛投影实验：在一个暗箱的前方放着一支点燃的蜡烛，蜡烛的光透过暗箱上的一个小孔投影在暗箱的后方平面上，并在这个平面上形成一个倒立的蜡烛图像。小孔模型能够把三维世界中的蜡烛投影到一个二维成像平面。同理，可以用这个简单的模型来解释相机的成像过程。对这个简单的针孔模型进行几何建模。设 O − x − y − z 为相机坐标系，z 轴指向相机前方，x 向右，y 向下。O为摄像机的光心，也是针孔模型中的针孔。现实世界的空间点P，经过小孔O投影之后，落在物理成像平面 O′ − x′ − y′ 上，成像点为 P′。设 P 的坐标为 [X,Y,Z]T，P′ 为 [X′,Y′,Z′]T，设物理成像平面到小孔的距离为f（焦距）。那么，根据三角形相似关系，有：
 
-![视觉SLAM十四讲-108](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-108.jpg)
+![视觉SLAM十四讲-108](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-108.jpg)
 
-![视觉SLAM十四讲-107](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-107.jpg)
+![视觉SLAM十四讲-107](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-107.jpg)
 
 其中负号表示成的像是倒立的。不过，实际相机得到的图像并不是倒像，可以等价地把成像平面对称地放到相机前方，和三维空间点一起放在摄像机坐标系的同一侧，如图所示。
 
-![视觉SLAM十四讲-109](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-109.jpg)
+![视觉SLAM十四讲-109](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-109.jpg)
 
 把公式中的负号去掉，X′,Y′ 放到等式左侧，整理得：
 
-![视觉SLAM十四讲-110](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-110.jpg)
+![视觉SLAM十四讲-110](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-110.jpg)
 
 这描述了点 P和它的像之间的空间关系。不过，在相机中最终获得的是一个个的像素，这还需要在成像平面上对像进行采样和量化。为了描述传感器将感受到的光线转换成图像像素的过程，设在物理成像平面上固定着一个像素平面 o − u − v，在像素平面有P′的像素坐标：[u,v]T。
 
 像素坐标系通常的定义方式是：原点o′位于图像的左上角，u 轴向右与 x 轴平行，v 轴向下与 y 轴平行。像素坐标系与成像平面之间，相差了一个缩放和一个原点的平移。设像素坐标在 u 轴上缩放了 α 倍，在 v 上缩放了 β 倍。同时，原点平移了 [cx,cy]T。那么，P′ 的坐标与像素坐标[u,v]T 的关系为：
 
-![视觉SLAM十四讲-111](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-111.jpg)
+![视觉SLAM十四讲-111](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-111.jpg)
 
 代入式
 
-![视觉SLAM十四讲-110](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-110.jpg)
+![视觉SLAM十四讲-110](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-110.jpg)
 
 把 αf 合并成 fx，把 βf 合并成 fy，得：
 
-![视觉SLAM十四讲-112](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-112.jpg)
+![视觉SLAM十四讲-112](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-112.jpg)
 
 其中，f 的单位为米，α,β 的单位为像素/米，所以 fx,fy 和 cx,cy 的单位为像素。写成矩阵形式：
 
-![视觉SLAM十四讲-113](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-113.jpg)
+![视觉SLAM十四讲-113](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-113.jpg)
 
 K矩阵称为相机的内参数矩阵（Camera Intrinsics）。通常相机的内参在出厂之后是固定的，不会在使用过程中发生变化。但有时需要自己确定相机的内参，也就是所谓的标定。（单目棋盘格张正友标定法[25]Z. Zhang, “Flexible camera calibration by viewing a plane from unknown orientations,” in Computer Vision, 1999. The Proceedings of the Seventh IEEE International Conference on, vol. 1, pp. 666–673, Ieee, 1999.）
 
 前面内参公式中的P是在相机坐标系下的坐标。由于相机在运动，所以P是相机的世界坐标（记为Pw）根据相机的当前位姿变换到相机坐标系下的结果。相机的位姿由它的旋转矩阵R和平移向量t来描述。那么有：
 
-![视觉SLAM十四讲-114](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-114.jpg)
+![视觉SLAM十四讲-114](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-114.jpg)
 
 后一个式子隐含了一次齐次坐标到非齐次坐标的转换。它描述了P的世界坐标到像素坐标的投影关系。相机的位姿R,t称为相机的外参数（Camera Extrinsics） 。
 相比于不变的内参，外参会随着相机运动发生改变，同时也是 SLAM 中待估计的目标，代表着机器人的轨迹。
 式子表明，可以把一个世界坐标点先转换到相机坐标系，再除掉它最后一维（Z）的数值（即该点距离相机成像平面的深度），这相当于把最后一维进行归一化处理，得到点 P 在相机归一化平面上的投影：
 
-![视觉SLAM十四讲-115](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-115.jpg)
+![视觉SLAM十四讲-115](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-115.jpg)
 
 归一化坐标可看成相机前方z=1处的平面上的一个点，这个 z = 1 平面也称为归一化平面。归一化坐标再左乘内参就得到了像素坐标，所以可以把像素坐标 [u,v]T 看成对归一化平面上的点进行量化测量的结果。从这个模型中可以看出，对相机坐标同时乘以任意非零常数，归一化坐标都是一样的，这说明点的深度在投影过程中被丢失了，所以单目视觉中没法得到像素点的深度值。
 
@@ -1629,7 +1629,7 @@ K矩阵称为相机的内参数矩阵（Camera Intrinsics）。通常相机的�
 
 对于单目相机而言，仅根据一个像素，我们无法确定这个空间点的具体位置。这是因为，从相机光心到归一化平面连线上的所有点，都可以投影至该像素上（相当于没有了Z轴维度）。只有当P的深度确定时（比如通过双目或 RGB-D 相机），我们才能确切地知道它的空间位置。如图所示。
 
-![视觉SLAM十四讲-116](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-116.png)
+![视觉SLAM十四讲-116](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-116.png)
 
 测量像素距离（或深度）的方式有很多种，比如人眼可以根据左右眼看到的景物差异（视差）来判断物体离我们的距离。双目相机的原理一样：通过同步采集左右相机的图像，计算图像间视差，来估计每一个像素的深度。
 
@@ -1637,9 +1637,9 @@ K矩阵称为相机的内参数矩阵（Camera Intrinsics）。通常相机的�
 
 考虑一个空间点 *P*，它在左眼相机和右眼相机各成一像，记作 *PL,PR*。由于相机基线的存在，这两个成像位置是不同的。理想情况下，由于左右相机只在 *x* 轴上有位移，因此 *P* 的像也只在 *x* 轴（对应图像的u轴）上有差异。记它的左侧坐标为 *uL*，右侧坐标为 *uR*，几何关系如图所示。
 
-![视觉SLAM十四讲-117](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-117.jpg)根据 △*PPLPR* 和 △*POLOR* 的相似关系，整理得：
+![视觉SLAM十四讲-117](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-117.jpg)根据 △*PPLPR* 和 △*POLOR* 的相似关系，整理得：
 
-![视觉SLAM十四讲-118](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-118.jpg)
+![视觉SLAM十四讲-118](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-118.jpg)
 
 双目相机的成像模型：*OL,OR* 为左右光圈中心，方框为成像平面，*f* 为焦距。*uL* 和 *uR* 为成像平面的坐标。注意，按照图中坐标定义，*uR* 应该是负数，所以图中标出的距离为 −*uR*。
 
@@ -1667,7 +1667,7 @@ RGB-D 相机能够实时地测量每个像素点的距离。但用红外光进�
 
 最简单的图像——灰度图：每个像素位置 (*x,y*) 对应一个灰度值 *I*，一张宽度为 *w*、高度为 *h* 的图像，数学上可以记为一个函数：
 
-![视觉SLAM十四讲-120](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-120.jpg)
+![视觉SLAM十四讲-120](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-120.jpg)
 
 其中 (*x,y*) 是像素的坐标。然而，计算机并不能表达实数空间，所以需要对下标和图像读数在某个范围内进行量化（类似于模拟到数字的概念）。在常见的灰度图中，用 0~255 的整数（一个 unsigned char或1 个字节）来表达图像的灰度读数。那么，一张宽度为 640 像素、高度为 480 像素分辨率的灰度图就可以表示为：
 
@@ -1687,7 +1687,7 @@ unsigned char pixel = image[y][x];  //访问图像像素
 
 它对应着灰度值 *I*(*x,y*) 的读数。
 
-![视觉SLAM十四讲-119](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-119.jpg)
+![视觉SLAM十四讲-119](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-119.jpg)
 
 
 
@@ -1737,7 +1737,7 @@ slambook/ch5/imageBasics/imageBasics.cpp
 
 编译运行：
 
-![视觉SLAM十四讲-121](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-121.jpg)
+![视觉SLAM十四讲-121](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-121.jpg)
 
 报错：
 
@@ -1781,7 +1781,7 @@ slambook/ch5/imageBasics/undistortImage.cpp
 
 运行如下：
 
-![视觉SLAM十四讲-122](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-122.jpg)
+![视觉SLAM十四讲-122](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-122.jpg)
 
 可以看到去畸变前后图像差别还是蛮大的。
 
@@ -1795,7 +1795,7 @@ slambook/ch5/stereoVision/stereoVision.cpp
 
 运行如下：（比较大的图片是视差图）
 
-![视觉SLAM十四讲-123](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-123.jpg)
+![视觉SLAM十四讲-123](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-123.jpg)
 
 例程中调用了OpenCV实现的SGBM算法（Semi-global Batch Matching）[26] H. Hirschmuller, “Stereo processing by semiglobal matching and mutual information,” IEEE Transactions on pattern analysis and machine intelligence, vol. 30, no. 2, pp. 328–341, 2008. 
 
@@ -1817,7 +1817,7 @@ slambook/ch5/rgbd/jointMap.cpp
 
 运行程序如下：
 
-![视觉SLAM十四讲-124](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-124.jpg)
+![视觉SLAM十四讲-124](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-124.jpg)
 
 ### 习题 
 
@@ -1844,17 +1844,17 @@ slambook/ch5/rgbd/jointMap.cpp
 
 经典 SLAM 模型由一个运动方程和一个观测方程构成：
 
-![视觉SLAM十四讲-125](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-125.jpg)                               
+![视觉SLAM十四讲-125](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-125.jpg)                               
 
 xk是相机的位姿变量，可以由Tk∈SE(3)表达。运动方程与输入的具体形式有关，在视觉SLAM中没有特殊性（和普通的机器人、车辆的情况一样）。观测方程则由针孔模型给定。假设在xk处对路标yj进行了一次观测，对应到图像上的像素位置z*k,j*，那么，观测方程可以表示成  
 
- ![视觉SLAM十四讲-126](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-126.png)
+ ![视觉SLAM十四讲-126](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-126.png)
 
 其中K为相机内参，*s*为像素点的距离，也是(R*k*y*j* +t*k*)的第三个分量。如果使用变换矩阵Tk描述位姿，那么路标点yj必须以齐次坐标来描述，计算完成后要转换为非齐次坐标。
 
 在运动和观测方程中，通常假设两个噪声项wk,*v*k,j满足零均值的高斯分布：
 
- ![视觉SLAM十四讲-127](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-127.jpg)
+ ![视觉SLAM十四讲-127](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-127.jpg)
 
 其中N表示高斯分布，**0**表示零均值，Rk,Qk,j为协方差矩阵。在这些噪声的影响下，希望通过带噪声的数据z和u推断位姿x和地图y（以及它们的概率分布），这构成了一个状态估计问题。
 
@@ -1868,25 +1868,25 @@ xk是相机的位姿变量，可以由Tk∈SE(3)表达。运动方程与输入�
 
 先讨论批量方法，考虑从1到*N*的所有时刻，并假设有*M*个路标点。定义所有时刻的机器人位姿和路标点坐标为：
 
- ![视觉SLAM十四讲-128](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-128.jpg)
+ ![视觉SLAM十四讲-128](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-128.jpg)
 
 用不带下标的u表示所有时刻的输入，z表示所有时刻的观测数据。对机器人状态的估计，从概率学的观点来看，就是已知输入数据u和观测数据z的条件下，求状态x*,*y的条件概率分布：
 
- ![视觉SLAM十四讲-129](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-129.jpg)
+ ![视觉SLAM十四讲-129](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-129.jpg)
 
 特别地，当不知道控制输入，只有一张张图像时，即只考虑观测方程 带来的数据时，相当于估计*P*(x*,*y|z)的条件概率分布，此问题也称为Structure from Motion（SfM），即如何从许多图像中重建三维空间结构。
 
 为了估计状态变量的条件分布，利用贝叶斯法则，有：
 
- ![视觉SLAM十四讲-130](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-130.jpg)
+ ![视觉SLAM十四讲-130](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-130.jpg)
 
 贝叶斯法则左侧称为后验概率，右侧的 *P*(z|x) 称为似然（Likehood），另一部分 *P*(x) 称为先验（Prior）。直接求后验分布是困难的，但是求一个状态最优估计，使得在该状态下后验概率最大化（Maximize a Posterior，MAP），则是可行的：
 
- ![视觉SLAM十四讲-131](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-131.jpg)
+ ![视觉SLAM十四讲-131](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-131.jpg)
 
 贝叶斯法则的分母部分与待估计的状态x*,*y无关，因而可以忽略。贝叶斯法则说明，求解最大后验概率等价于最大化似然和先验的乘积。进一步，如果不知道机器人位姿或路标大概在什么地方，此时就没有了先验。那么，可以求解最大似然估计（Maximize Likelihood Estimation，MLE）：
 
- ![视觉SLAM十四讲-132](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-132.jpg)
+ ![视觉SLAM十四讲-132](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-132.jpg)
 
 似然是指“在现在的位姿下，可能产生怎样的观测数据”。但是由于知道观测数据，所以最大似然估计可以理解成：“在什么样的状态下，最可能产生现在观测到的数据”。这就是最大似然估计的直观意义。
 
@@ -1894,39 +1894,39 @@ xk是相机的位姿变量，可以由Tk∈SE(3)表达。运动方程与输入�
 
 如何求最大似然估计呢？在高斯分布的假设下，最大似然能够有较简单的形式。回顾观测模型，对于某一次观测：
 
- ![视觉SLAM十四讲-133](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-133.jpg)
+ ![视觉SLAM十四讲-133](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-133.jpg)
 
 假设噪声项vk ∼ N (0,Qk,j)，观测数据的条件概率为：
 
- ![视觉SLAM十四讲-134](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-134.jpg)
+ ![视觉SLAM十四讲-134](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-134.jpg)
 
 它依然是一个高斯分布。考虑单次观测的最大似然估计，可以使用最小化负对数来求一个高斯分布的最大似然。
 
 高斯分布在负对数下有较好的数学形式。考虑任意高维高斯分布x ∼ N(µ,Σ)，它的概率密度函数展开形式为：
 
-![视觉SLAM十四讲-135](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-135.jpg)                 
+![视觉SLAM十四讲-135](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-135.jpg)                 
 
 对其取负对数，则变为：
 
-![视觉SLAM十四讲-136](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-136.jpg)
+![视觉SLAM十四讲-136](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-136.jpg)
 
 因为对数函数是单调递增的，所以对原函数求最大化相当于对负对数求最小化。在最小化上式的x时，第一项与x无关，可以略去。于是，只要最小化右侧的二次型项，就得到了对状态的最大似然估计。代入SLAM的观测模型，相当于在求：
 
-![视觉SLAM十四讲-137](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-137.jpg)
+![视觉SLAM十四讲-137](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-137.jpg)
 
 该式等价于最小化噪声项（即误差）的一个二次型。这个二次型称为马哈拉诺比斯距离（Mahalanobis distance），又叫马氏距离。它也可以看成是由(Qk,j)-1 加权之后的欧氏距离（二范数），这里(Qk,j)-1也叫做信息矩阵，即高斯分布协方差矩阵之逆。
 
 现在考虑批量时刻的数据。通常假设各个时刻的输入和观测是相互独立的，这意味着各个输入之间是独立的，各个观测之间是独立的，并且输入和观测也是独立的。于是可以对联合分布进行因式分解：
 
-![视觉SLAM十四讲-138](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-138.jpg)
+![视觉SLAM十四讲-138](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-138.jpg)
 
 这说明可以独立地处理各时刻的运动和观测。定义各次输入和观测数据与模型之间的误差：
 
- ![视觉SLAM十四讲-139](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-139.jpg)
+ ![视觉SLAM十四讲-139](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-139.jpg)
 
 那么，最小化所有时刻估计值与真实值之间的马氏距离，等价于求最大似然估计。负对数允许把乘积变成求和：
 
-![视觉SLAM十四讲-140](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-140.jpg)
+![视觉SLAM十四讲-140](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-140.jpg)
 
 这样就得到了一个最小二乘问题（Least Square Problem），它的解等价于状态的最大似然估计。直观上看，由于噪声的存在，当把估计的轨迹与地图代入 SLAM 的运动、观测方程中时，它们并不会完美地成立。这时对状态的估计值进行微调，使得整体的误差下降一些。当然这个下降也有限度，它一般会到达一个极小值。这就是一个典型非线性优化的过程。
 
@@ -1942,47 +1942,47 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 考虑一个离散时间系统：
 
- ![视觉SLAM十四讲-141](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-141.jpg)
+ ![视觉SLAM十四讲-141](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-141.jpg)
 
 这可以表达一辆沿 *x* 轴前进或后退的汽车。第一个公式为运动方程，uk 为输入，wk 为噪声；第二个公式为观测方程，zk 为对汽车位置的测量。取时间 k = 1,...,3，现希望根据已有的 v,y 进行状态估计。设初始状态 *x*0 已知，来推导批量（batch）状态的最大似然估计。
 
 首先，令批量状态变量为x = [*x*0*,x*1*,x*2*,x*3]T，令批量观测为z = [*z*1*,z*2*,z*3]T，定义u = [*u*1*,u*2*,u*3]T。最大似然估计为：
 
- ![视觉SLAM十四讲-142](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-142.jpg)
+ ![视觉SLAM十四讲-142](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-142.jpg)
 
 运动方程：
 
-![视觉SLAM十四讲-143](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-143.jpg)
+![视觉SLAM十四讲-143](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-143.jpg)
 
 观测方程：
 
-![视觉SLAM十四讲-144](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-144.jpg)
+![视觉SLAM十四讲-144](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-144.jpg)
 
 构建误差变量：
 
- ![视觉SLAM十四讲-145](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-145.jpg)
+ ![视觉SLAM十四讲-145](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-145.jpg)
 
 于是最小二乘的目标函数为
 
-![视觉SLAM十四讲-146](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-146.jpg)            
+![视觉SLAM十四讲-146](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-146.jpg)            
 
 这个系统是线性系统，将它写成向量形式。定义向量y = [u*,*z]T，那么可以写出矩阵H，使得：
 
- ![视觉SLAM十四讲-147](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-147.jpg)
+ ![视觉SLAM十四讲-147](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-147.jpg)
 
 那么：
 
-![视觉SLAM十四讲-148](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-148.png)
+![视觉SLAM十四讲-148](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-148.png)
 
-![视觉SLAM十四讲-149](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-149.jpg)
+![视觉SLAM十四讲-149](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-149.jpg)
 
 整个问题可以写成：
 
-![视觉SLAM十四讲-150](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-150.jpg)
+![视觉SLAM十四讲-150](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-150.jpg)
 
 这个问题有唯一的解：
 
-![视觉SLAM十四讲-151](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-151.jpg)
+![视觉SLAM十四讲-151](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-151.jpg)
 
 
 
@@ -1990,11 +1990,11 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 考虑一个最小二乘问题：
 
-![视觉SLAM十四讲-152](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-152.jpg)                           
+![视觉SLAM十四讲-152](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-152.jpg)                           
 
 其中，自变量x ∈ Rn，f是任意标量非线性函数 f(x) : Rn→ R。注意这里的系数1/2是无关紧要的。如何求解这样一个优化问题：如果 f 是个数学形式上很简单的函数，那么该问题可以用解析形式来求。令目标函数的导数为零，然后求解x的最优值，就和求二元函数的极值一样：
 
-![视觉SLAM十四讲-153](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-153.jpg)
+![视觉SLAM十四讲-153](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-153.jpg)
 
 解此方程，就得到了导数为零处的极值。可能是极大、极小或鞍点处的值，只要逐个比较函数值大小即可。如果 *f* 为简单的线性函数，那么这个问题就是简单的线性最小二乘问题，但是有些导函数形式复杂，使得该方程不容易求解。求解这个方程需要知道关于目标函数的全局性质，而通常这是不大可能的。对于不方便直接求解的最小二乘问题，可以用迭代的方式，从一个初始值出发，不断地更新当前的优化变量，使目标函数下降。具体步骤可列写如下：
 
@@ -2002,7 +2002,7 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 2. 对于第 *k* 次迭代，寻找一个增量 ∆x*k*，使得
 
-   ![视觉SLAM十四讲-154](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-154.jpg)
+   ![视觉SLAM十四讲-154](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-154.jpg)
 
    达到极小值。  
 
@@ -2018,7 +2018,7 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 考虑第 k 次迭代，假设在xk处，想要找到增量 ∆xk，最直观的方式是将目标函数在xk附近进行泰勒展开：
 
-![视觉SLAM十四讲-155](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-155.jpg)
+![视觉SLAM十四讲-155](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-155.jpg)
 
 其中J(xk) 是 F(x)关于x的一阶导数（也叫梯度、雅可比矩阵﹝Jacobian﹞），H 则是二阶导数（海塞﹝Hessian﹞矩阵），它们都在xk 处取值。可以选择保留泰勒展开的一阶或二阶项，那么对应的求解方法则称为一阶梯度或二阶梯度法。如果保留一阶梯度，取增量为反向的梯度，即可保证函数下降：∆x∗ = −J(xk)           
 
@@ -2028,11 +2028,11 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 选择保留二阶梯度信息，此时增量方程为：
 
-![视觉SLAM十四讲-156](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-156.jpg)
+![视觉SLAM十四讲-156](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-156.jpg)
 
 右侧只含 ∆x的零次、一次和二次项。求右侧等式关于 ∆x的导数并令它为零，得到：
 
-![视觉SLAM十四讲-157](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-157.jpg)
+![视觉SLAM十四讲-157](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-157.jpg)
 
 求解这个线性方程就得到了增量。此类方法又称为牛顿法。
 
@@ -2046,11 +2046,11 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 这里J(x)T为f(x)关于x的导数，为n×1的列向量。目标是寻找增量∆x，使得∥f(x+∆x)∥2达到最小。为了求 ∆x，需要解一个线性的最小二乘问题：
 
-![视觉SLAM十四讲-159](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-159.jpg)
+![视觉SLAM十四讲-159](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-159.jpg)
 
 根据极值条件，将上述目标函数对 ∆x求导，并令导数为零。可以得到如下方程组：
 
- ![视觉SLAM十四讲-160](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-160.jpg)
+ ![视觉SLAM十四讲-160](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-160.jpg)
 
 这个方程是关于变量∆x的线性方程组，称它为增量方程，也可以称为高斯牛顿方程（GaussNewton equation）或者正规方程（Normal equation）。把左边的系数定义为H，右边定义为g，那么上式变为：H∆x = g.             
 
@@ -2078,7 +2078,7 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 那么如何确定这个信赖区域的范围呢？一个比较好的方法是根据近似模型跟实际函数之间的差异来确定：如果差异小，说明近似效果好，扩大近似的范围；反之，如果差异大，就缩小近似的范围。我们定义一个指标 *ρ* 来刻画近似的好坏程度：
 
-![视觉SLAM十四讲-161](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-161.jpg)
+![视觉SLAM十四讲-161](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-161.jpg)
 
 *ρ* 的分子是实际函数下降的值，分母是近似模型下降的值。如果 *ρ* 接近于 1，则近似是好的。如果 *ρ* 太小，说明实际减小的值远少于近似减小的值，则认为近似比较差，需要缩小近似范围。反之，如果 *ρ* 比较大，则说明实际下降的比预计的更大，可以放大近似范围。
 
@@ -2088,7 +2088,7 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 2. 对于第 k 次迭代，在高斯牛顿法的基础上加上信赖区域，求解：
 
-   ![视觉SLAM十四讲-162](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-162.jpg)
+   ![视觉SLAM十四讲-162](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-162.jpg)
 
    其中 µ 是信赖区域的半径，D 为系数矩阵。 
 
@@ -2104,7 +2104,7 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 这里近似范围扩大的倍数和阈值都是经验值，可以替换成别的数值。
 
-![视觉SLAM十四讲-162](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-162.jpg)
+![视觉SLAM十四讲-162](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-162.jpg)
 
 这个式子中，把增量限定于一个半径为 *µ* 的球中，认为只在这个球内才是有效的。带上D之后，这个球可以看成一个椭球。在列文伯格提出的优化方法中，把D取成单位阵I，相当于直接把 ∆x*k* 约束在一个球中。随后，马夸尔特提出将D取成非负数对角阵——实际中通常用J*T*J 的对角元素平方根，使得在梯度小的维度上约束范围更大一些。
 
@@ -2112,11 +2112,11 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 这个子问题是带不等式约束的优化问题，用拉格朗日乘子把约束项放到目标函数中，构成拉格朗日函数：
 
-![视觉SLAM十四讲-163](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-163.jpg)
+![视觉SLAM十四讲-163](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-163.jpg)
 
 这里 *λ* 为拉格朗日乘子。类似于高斯牛顿法中的做法，令该拉格朗日函数关于∆x的导数为零，它的核心仍是计算增量的线性方程：
 
-![视觉SLAM十四讲-164](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-164.jpg)     
+![视觉SLAM十四讲-164](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-164.jpg)     
 
 可以看到，增量方程相比于高斯牛顿法，多了一项 *λ*D*T*D。考虑它的简化形式，即D = I，那么相当于求解：
 
@@ -2150,37 +2150,37 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 考虑一条满足以下方程的曲线：
 
-![视觉SLAM十四讲-165](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-165.jpg)
+![视觉SLAM十四讲-165](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-165.jpg)
 
 其中 *a,b,c* 为曲线的参数，*w* 为高斯噪声，满足 *w* ∼ (0*,σ*2)。假设有 *N* 个关于 *x,y* 的观测数据点，根据这些数据点求出曲线的参数。那么，可以求解下面的最小二乘问题来估计曲线参数：
 
-![视觉SLAM十四讲-166](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-166.jpg)
+![视觉SLAM十四讲-166](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-166.jpg)
 
 在这个问题中，待估计的变量是 *a,b,c*，而不是 *x*。程序里先根据模型生成 *x,y* 的真值，然后在真值中添加高斯分布的噪声。随后，使用高斯牛顿法来从带噪声的数据（x，y）拟合参数模型。定义误差为:
 
-![视觉SLAM十四讲-167](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-167.jpg)
+![视觉SLAM十四讲-167](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-167.jpg)
 
 那么可以求出每个误差项对于状态变量的导数：  
 
-![视觉SLAM十四讲-168](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-168.png)
+![视觉SLAM十四讲-168](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-168.png)
 
 于是
 
-![视觉SLAM十四讲-169](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-169.jpg)
+![视觉SLAM十四讲-169](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-169.jpg)
 
 高斯牛顿法的增量方程为：
 
-![视觉SLAM十四讲-170](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-170.jpg)              
+![视觉SLAM十四讲-170](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-170.jpg)              
 
 也可以选择把所有的J*i* 排成一列，将这个方程写成矩阵形式，它的含义与求和形式是一致的。下面的代码演示了这个过程是如何进行的：slambook2/ch6/gaussNewton.cpp
 
 在这个例子中演示了如何对一个简单的拟合问题进行迭代优化。该程序输出每一步迭代的目标函数值和更新量，如下：
 
-![视觉SLAM十四讲-172](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-172.jpg)
+![视觉SLAM十四讲-172](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-172.jpg)
 
 整个问题的目标函数在迭代 9 次之后趋近收敛，更新量趋近于零。最终估计的值与真值接近，函数图像如下：
 
-![视觉SLAM十四讲-173](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-173.jpg)
+![视觉SLAM十四讲-173](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-173.jpg)
 
 蓝色点为100个数据点，黑色线为理论模型，红色线为拟合的模型。
 
@@ -2190,7 +2190,7 @@ SLAM 中的最小二乘问题具有一些特定的结构：
 
 Google Ceres 是一个广泛使用的最小二乘问题求解库。在 Ceres 中，只需按照一定步骤定义待解的优化问题，然后交给求解器计算即可。Ceres 求解的最小二乘问题最一般的形式如下（带边界的核函数最小二乘）：
 
-![视觉SLAM十四讲-171](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-171.jpg)
+![视觉SLAM十四讲-171](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-171.jpg)
 
 在这个问题中，*x*1*,*··· *,xn* 为优化变量，又称参数块（Parameter blocks），*fi* 称为代价函数（Cost function），也称为残差块（Residual blocks），在 SLAM 中也可理解为误差项。*lj* 和 *uj* 为第 *j* 个优化变量的上限和下限。在最简单的情况下，取 *lj* = −∞*,uj* = ∞（不限制优化变量的边界）。此时，目标函数由许多平方项经过一个核函数 *ρ*(·) 之后求和组成。取 *ρ* 为恒等函数，那么目标函数即为许多项的平方和，就得到了无约束的最小二乘问题。为了让 Ceres 求解这个问题，需要做以下几件事：
 
@@ -2246,7 +2246,7 @@ g2o（General Graphic Optimization，G2O）是在SLAM领域广为使用的优化
 
 如下图：
 
-![视觉SLAM十四讲-174](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-174.jpg)
+![视觉SLAM十四讲-174](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-174.jpg)
 
 用三角形表示相机位姿节点，用圆形表示路标点，它们构成了图优化的顶点；同时，实线表示相机的运动模型，虚线表示观测模型，它们构成了图优化的边。最基本的图优化是用图模型来表达一个非线性最小二乘的优化问题，可以利用图模型的某些性质做更好的优化。
 
@@ -2344,7 +2344,7 @@ ORB特征也由关键点和描述子两部分组成。它的关键点称为“Or
 **FAST 关键点**
 FAST 是一种角点,主要检测局部像素灰度变化明显的地方,以速度快著称。它的思想是:如果一个像素与邻域的像素差别较大(过亮或过暗),那么它更可能是角点。相比于其他角点检测算法,FAST 只需比较像素亮度的大小,十分快捷。它的检测过程如下:
 
-![视觉SLAM十四讲-175](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-175.jpg)
+![视觉SLAM十四讲-175](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-175.jpg)
 
 1. 在图像中选取像素p,假设它的亮度为Ip。
 
@@ -2360,21 +2360,21 @@ FAST 是一种角点,主要检测局部像素灰度变化明显的地方,以速�
 
 FAST特征点的计算仅仅是比较像素间亮度的差异，所以速度非常快，但它也有重复性不强，分布不均匀的缺点。此外，FAST角点不具有方向信息。同时，由于它固定取半径为3的圆，存在尺度问题：远处看着像是角点的地方，接近后看可能就不是角点了。针对FAST角点不具有方向性和尺度的弱点，ORB添加了尺度和旋转的描述。尺度不变性由构建图像金字塔，并在金字塔的每一层上检测角点来实现。而特征的旋转是由灰度质心法（Intensity Centroid）实现的。 金字塔是计算图视觉中常用的一种处理方法，如下图。
 
-![视觉SLAM十四讲-176](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-176.jpg)
+![视觉SLAM十四讲-176](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-176.jpg)
 
 金字塔底层是原始图像。每往上一层，就对图像进行一个固定倍率的缩放，这样就有了不同分辨率的图像。较小的图像可以看成是远处看过来的场景。在特征匹配算法中可以匹配不同层上的图像，从而实现尺度不变性。 例如，如果相机在后退，那么应该能够在上一个图像金字塔的上层和下一个图像的下层中找到匹配。 在旋转方面，计算特征点附近的图像灰度质心。所谓质心是指以图像块灰度值作为权重的中心。其具体操作步骤如下： 
 
 1. 在一个小的图像块B中，定义图像块的矩为
 
-![视觉SLAM十四讲-177](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-177.jpg)
+![视觉SLAM十四讲-177](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-177.jpg)
 
 2. 通过矩可以找到图像块的质心：
 
-![视觉SLAM十四讲-178](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-178.png)
+![视觉SLAM十四讲-178](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-178.png)
 
 3. 连接图像块的几何中心O与质心 C，得到一个方向向量 OC，于是特征点的方向可以定义为 
 
-![视觉SLAM十四讲-179](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-179.jpg)
+![视觉SLAM十四讲-179](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-179.jpg)
 
 通过以上方法，FAST角点便具有了尺度与旋转的描述，从而大大提升了其在不同图像之间表述的鲁棒性。ORB 中，把这种改进后的FAST称为 Oriented FAST。
 
@@ -2392,7 +2392,7 @@ BRIEF 是一种二进制描述子，其描述向量由许多个0和1组成，这
 
 考虑两个时刻的图像。如果在图像It中提取到特征点 
 
-![视觉SLAM十四讲-180](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-180.jpg)
+![视觉SLAM十四讲-180](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-180.jpg)
 
 在图像 It+1 中也提取到特征点xnt+1。如何寻找这两个集合元素的对应关系？最简单的特征匹配方法就是暴力匹配（Brute-Force Matcher）。即对每一个特征点 xm t 与所有的 xn t+1 测量描述子的距离，然后排序，取最近的一 个作为匹配点。描述子距离表示了两个特征之间的相似程度，不过在实际运用中还可以取不同的距离度量范数。对于浮点类型的描述子，使用欧氏距离进行度量即可。而对于二进制的描述子（比如BRIEF），往往使用汉明距离（Hamming distance）作为度量——两个二进制串之间的汉明距离，指的是其不同位数的个数。 然而，当特征点数量很大时，暴力匹配法的运算量将变得很大，特别是当想要匹配某个帧和一张地图的时候。这不符合在SLAM中的实时性需求。此时快速近似最近邻（FLANN）算法更加适合于匹配点数量极多的情况。这些匹配算法理论已经成熟，实现上集成到OpenCV了。
 
@@ -2424,7 +2424,7 @@ target_link_libraries("可执行文件" ${Sophus_LIBRARIES} fmt)
 
 运行结果：
 
-![视觉SLAM十四讲-182](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-182.jpg)
+![视觉SLAM十四讲-182](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-182.jpg)
 
 未筛选的匹配中带有大量的误匹配。经过一次筛选之后，匹配数量减少了许多，大多数匹配都是正确的。这里筛选的依据是汉明距离小于最小距离的两倍，这是一种工程上的经验方法。尽管在示例图像中能够筛选出正确的匹配，但仍然不能保证在所有其他图像中得到的匹配都是正确的。因此，在后面的运动估计中，还需要使用去除误匹配的算法。
 
@@ -2434,7 +2434,7 @@ target_link_libraries("可执行文件" ${Sophus_LIBRARIES} fmt)
 
 运行结果：
 
-![视觉SLAM十四讲-183](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-183.jpg)
+![视觉SLAM十四讲-183](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-183.jpg)
 
 在计算中用256位的二进制描述，即对应到8个32位的unsigned int数据，用 typedef 将它表示成 DescType。然后计算 FAST 特征点的角度，再使用该角度计算描述子。此代码中通过三角函数的原理回避了复杂的 arctan 以及 sin、cos 计算，从而达到加速的效果。在 BfMatch 函数中还使用了 SSE 指令集中的_mm_popcnt_u32 函数来计算一个 unsigned int 变量中1的个数，从而达到计算汉明距离的效果。
 
@@ -2454,39 +2454,39 @@ target_link_libraries("可执行文件" ${Sophus_LIBRARIES} fmt)
 
 假设从两张图像中得到了一对配对好的特征点,如图:
 
-![视觉SLAM十四讲-184](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-184.jpg)
+![视觉SLAM十四讲-184](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-184.jpg)
 
 如果有若干对这样的匹配点,就可以通过这些二维图像点的对应关系,恢复出在两帧之间摄像机的运动。求取两帧图像I1, I2之间的运动,设第一帧到第二帧的运动为R,t。两个相机中心分别为O1,O2。如果I1中有一个特征点p1 ,它在I2中对应着特征点p2，两者是通过特征匹配得到的。如果匹配正确,说明它们是同一个空间点在两个成像平面上的投影。首先,连线O1p1和连线O2p2在三维空间中会相交于点P。这时候点O1, O2 ,P三个点可以确定一个平面,称为极平面(Epipolar plane) 。O1O2连线与像平面I1, I2 的交点分别为 e1, e2 。e1, e2 称为极点(Epipoles) ,O1O2被称为基线(Baseline) 。称极平面与两个像平面 I1, I2之间的相交线 L1, L2极线(Epipolar line) 。
 
 直观讲,从第一帧的角度看,射线O1p1是某个像素可能出现的空间位置——因为该射线上的所有点都会投影到同一个像素点。同时,如果不知道P的位置,那么当在第二幅图像上看时,连线e2p2(也就是第二幅图像中的极线)就是P可能出现的投影的位置,也就是射线O1p1在第二个相机中的投影。由于通过特征点匹配确定了p2的像素位置,所以能够推断P的空间位置,以及相机的运动。如果没有特征匹配，就没法确定p2到底在极线的哪个位置了。
 从代数角度来看一下这里的几何关系。在第一帧的坐标系下,设P的空间位置为P = [X, Y, Z]T.根据针孔相机模型知道两个像素点 p1, p2的像素位置为：
-![视觉SLAM十四讲-185](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-185.jpg)
+![视觉SLAM十四讲-185](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-185.jpg)
 
 这里K为相机内参矩阵,R, t 为两个坐标系的相机运动。具体来说,这里计算的是 R21和 t21 ,因为是把第一个坐标系下的坐标转换到第二个坐标系下。在使用齐次坐标时,一个向量等于它自身乘上任意的非零常数。这通常用于表达一个投影关系。例如 s1p1 和 p1 成投影关系,它们在齐次坐标的意义下是相等的。称这种相等关系为尺度意义下相等(equal up to a scale),记作:sp ≃ p.那么,上述两个投影关系可写为:
 p1 ≃ KP ,p2 ≃ K(RP + t) .
 现在取:
 
-![视觉SLAM十四讲-186](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-186.jpg)
+![视觉SLAM十四讲-186](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-186.jpg)
 
 这里的x1,x2是两个像素点的归一化平面上的坐标。代入上式,得:x2 ≃ Rx1 + t.
 
 两边同时左乘 t∧ 。根据∧的定义,这相当于两侧同时与t做外积:
 
-![视觉SLAM十四讲-187](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-187.jpg)
+![视觉SLAM十四讲-187](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-187.jpg)
 
-然后,两侧同时左乘![视觉SLAM十四讲-188](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-188.jpg)
+然后,两侧同时左乘![视觉SLAM十四讲-188](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-188.jpg)
 
-得：![视觉SLAM十四讲-189](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-189.jpg)
+得：![视觉SLAM十四讲-189](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-189.jpg)
 
-观察等式左侧,![视觉SLAM十四讲-190](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-190.jpg)是一个与 t 和x2都垂直的向量。把它再和x2做内积时,将得到0。由于等式左侧严格为零,那么乘以任意非零常数之后也为零,于是可以把 ≃ 写成通常的等号。因此,就得到了:![视觉SLAM十四讲-191](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-191.jpg)
+观察等式左侧,![视觉SLAM十四讲-190](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-190.jpg)是一个与 t 和x2都垂直的向量。把它再和x2做内积时,将得到0。由于等式左侧严格为零,那么乘以任意非零常数之后也为零,于是可以把 ≃ 写成通常的等号。因此,就得到了:![视觉SLAM十四讲-191](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-191.jpg)
 
 重新代入 p1, p2 ,有:	
 
-![视觉SLAM十四讲-192](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-192.png)
+![视觉SLAM十四讲-192](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-192.png)
 
 这两个式子都称为对极约束。它的几何意义是O1, P, O2三者共面。对极约束中同时包含了平移和旋转。把中间部分记作两个矩阵:基础矩阵(Fundamental Matrix)F和本质矩阵(Essential Matrix)E,于是可以进一步简化对极约束:
 
-![视觉SLAM十四讲-193](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-193.png)
+![视觉SLAM十四讲-193](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-193.png)
 
 对极约束简洁地给出了两个匹配点的空间位置关系。于是,相机位姿估计问题变为以下两步:
 
@@ -2501,7 +2501,7 @@ p1 ≃ KP ,p2 ≃ K(RP + t) .
 • 另一方面,由于平移和旋转各有 3 个自由度,故 t∧R 共有 6 个自由度。但由于尺度等价性,故 E 实际上有 5 个自由度。表明最少可以用5对点来求解E。但是,E的内在性质是一种非线性性质,在估计时会带来麻烦,因此,也可以只考虑它的尺度等价性,使用8对点来估计E——这就是经典的八点法(Eight-point-algorithm) 。八点法只利用了E的线性性质,因此可以在线性代数框架下求解。
 考虑一对匹配点,它们的归一化坐标为 x1= [u1 , v1 , 1] T , x2 = [u2 , v2 , 1] T 。根据对极约束,有:
 
-![视觉SLAM十四讲-194](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-194.png)
+![视觉SLAM十四讲-194](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-194.png)
 
 把矩阵 E 展开,写成向量的形式:
 e = [e1 , e2 , e3 , e4 , e5 , e6 , e7 , e8 , e9 ] T ,
@@ -2509,43 +2509,43 @@ e = [e1 , e2 , e3 , e4 , e5 , e6 , e7 , e8 , e9 ] T ,
 [u1u2 , u1v2 , u1, v1u2, v1v2, v1, u2, v2, 1] ·e = 0.
 同理,对于其他点对也有相同的表示。把所有点都放到一个方程中,变成线性方程组(ui , vi 表示第 i 个特征点，以此类推）：
 
-![视觉SLAM十四讲-195](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-195.jpg)
+![视觉SLAM十四讲-195](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-195.jpg)
 
 这八个方程构成了一个线性方程组。它的系数矩阵由特征点位置构成，大小为 8 × 9。 e 位于该矩阵的零空间中。如果系数矩阵是满秩的（即秩为 8），那么它的零空间维数为 1， 也就是 e 构成一条线。这与 e 的尺度等价性是一致的。如果八对匹配点组成的矩阵满足秩为 8 的条件，那么E的各元素就可由上述方程解得。 
 
-接下来的问题是如何根据已经估得的本质矩阵E，恢复出相机的运动 R, t。这个过程是由奇异值分解（SVD）得到的。设 E 的 SVD 分解为：![视觉SLAM十四讲-196](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-196.jpg)
+接下来的问题是如何根据已经估得的本质矩阵E，恢复出相机的运动 R, t。这个过程是由奇异值分解（SVD）得到的。设 E 的 SVD 分解为：![视觉SLAM十四讲-196](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-196.jpg)
 
 其中 U,V 为正交阵，Σ 为奇异值矩阵。根据 E 的内在性质，可以知道 Σ = diag(σ, σ, 0)。 在 SVD 分解中，对于任意一个 E，存在两个可能的 t, R 与它对应：
 
-![视觉SLAM十四讲-197](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-197.jpg)
+![视觉SLAM十四讲-197](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-197.jpg)
 
-其中![视觉SLAM十四讲-198](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-198.jpg)表示沿 Z 轴旋转 90 度得到的旋转矩阵。同时，由于 −E 和 E 等价，所以对任意一个 t 取负号，也会得到同样的结果。因此，从 E 分解到 t, R 时，一共存在四个可能的解。只有第一种解中，P 在两个相机中都具有正的深度。因此，只要把任意一点代入四种解中，检测该点在两个相机下的深度，就可以确定哪个解是正确的了。 
+其中![视觉SLAM十四讲-198](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-198.jpg)表示沿 Z 轴旋转 90 度得到的旋转矩阵。同时，由于 −E 和 E 等价，所以对任意一个 t 取负号，也会得到同样的结果。因此，从 E 分解到 t, R 时，一共存在四个可能的解。只有第一种解中，P 在两个相机中都具有正的深度。因此，只要把任意一点代入四种解中，检测该点在两个相机下的深度，就可以确定哪个解是正确的了。 
 
 如果利用 E 的内在性质，那么它只有五个自由度。所以最小可以通过五对点来求解相机运动。然而这种做法形式复杂，从工程实现角度考虑，由于平时通常会有几十对乃至上百对的匹配点，从八对减至五对意义并不明显。剩下的问题还有一个：根据线性方程解出的 E，可能不满足 E 的内在性质——它的奇异值不一定为 σ, σ, 0 的形式。这时，在做 SVD 时会刻意地把 Σ 矩阵调整成上面的样子。通常的做法是，对八点法求得的 E 进行 SVD 分解后，会得到奇异值矩阵 Σ = diag(σ1, σ2, σ3)，不妨设 σ1 ≥ σ2 ≥ σ3。取：
 
-![视觉SLAM十四讲-199](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-199.jpg)
+![视觉SLAM十四讲-199](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-199.jpg)
 
 这相当于是把求出来的矩阵投影到了 E 所在的流形上。更简单的做法是将奇异值矩阵取成 diag(1, 1, 0)，因为 E 具有尺度等价性，这样做也是合理的。
 
 #### 7.3.3单应矩阵 
 
-单应矩阵（Homography）H ，描述了两个平面之间的映射关系。若场景中的特征点都落在同一平面上（比如墙，地面等），则可以通过单应性来进行运动估计。这种情况在无人机携带的俯视相机，或扫地机携带的顶视相机中比较常见。单应矩阵通常描述处于共同平面上的一些点，在两张图像之间的变换关系。考虑在图像I1和I2有一对匹配好的特征点p1和p2。这些特征点落在某平面上。设这个平面满足方程： ![视觉SLAM十四讲-200](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-200.jpg)
+单应矩阵（Homography）H ，描述了两个平面之间的映射关系。若场景中的特征点都落在同一平面上（比如墙，地面等），则可以通过单应性来进行运动估计。这种情况在无人机携带的俯视相机，或扫地机携带的顶视相机中比较常见。单应矩阵通常描述处于共同平面上的一些点，在两张图像之间的变换关系。考虑在图像I1和I2有一对匹配好的特征点p1和p2。这些特征点落在某平面上。设这个平面满足方程： ![视觉SLAM十四讲-200](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-200.jpg)
 
-然后代入![视觉SLAM十四讲-185](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-185.jpg)，得：
+然后代入![视觉SLAM十四讲-185](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-185.jpg)，得：
 
-![视觉SLAM十四讲-201](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-201.jpg)
+![视觉SLAM十四讲-201](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-201.jpg)
 
 把直接描述图像坐标 p1 和 p2 之间的变换的中间这部分记为 H，于是 p2 = Hp1。它的定义与旋转、平移以及平面的参数有关。单应矩阵 H是一个 3 × 3 的矩阵，求解时的思路可以先根据匹配点计算 H，然后将它分解以计算旋转和平移。把上式展开，得：
 
-![视觉SLAM十四讲-202](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-202.jpg)
+![视觉SLAM十四讲-202](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-202.jpg)
 
 注意这里的等号是在非零因子下成立的。在实际处理中，通常乘以一个非零因子使得 h9 = 1（在它取非零值时）。然后根据第三行，去掉这个非零因子，于是有：
 
-![视觉SLAM十四讲-203](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-203.jpg)
+![视觉SLAM十四讲-203](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-203.jpg)
 
 这样一组匹配点对就可以构造出两项约束（事实上有三个约束，但是因为线性相关，只取前两个），于是自由度为 8 的单应矩阵可以通过 4 对匹配特征点算出（注意：这些特征点不能有三点共线的情况），即求解以下的线性方程组（当 h9 = 0 时，右侧为零）：
 
-![视觉SLAM十四讲-204](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-204.jpg)
+![视觉SLAM十四讲-204](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-204.jpg)
 
 这种做法把H矩阵看成了向量，通过解该向量的线性方程来恢复H，又称直接线性变换法（Direct Linear Transform）。求出单应矩阵以后需要对其进行分解，才可以得到相应的旋转矩阵 R 和平移向量 t。分解的方法包括数值法与解析法 。单应矩阵的分解会返回四组旋转矩阵与平移向量，并且同时可以计算出它们分别对应的场景点所在平面的法向量。如果已知成像的地图点的深度全为正值（即在相机前方），则又可以排除两组解。最后仅剩两组解，这时需要通过更多的先验信息进行判断。通常可以通过假设已知场景平面的法向量来解决，如场景平面 与相机平面平行，那么法向量 n 的理论值为1。 
 
@@ -2624,13 +2624,13 @@ epipolar constraint = [-0.0008009088410884102
 
 三角测量是指，通过在两处观察同一个点的夹角，确定该点的距离。三角测量最早由高斯提出并应用于测量学中，它在天文学、地理学的测量中都有应用。例如可以通过不同季节观察到星星的角度，估计它离我们的距离。在SLAM中主要用三角化来估计像素点的距离。
 
-![视觉SLAM十四讲-205](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-205.jpg)
+![视觉SLAM十四讲-205](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-205.jpg)
 
 考虑图像 I1 和 I2，以左图为参考，右图的变换矩阵为 T。相机光心 为 O1 和 O2。在 I1 中有特征点 p1，对应 I2 中有特征点 p2。理论上直线 O1p1 与 O2p2 在场景中会相交于一点 P，该点即是两个特征点所对应的地图点在三维场景中的位置。然而由于噪声的影响，这两条直线往往无法相交。因此可以通过最二小乘去求解。 按照对极几何中的定义，设 x1, x2 为两个特征点的归一化坐标，那么它们满足： s1x1 = s2Rx2 + t. 
 
-已知 R, t，想要求解的是两个特征点的深度 s1, s2。这两个深度是可以分开求的，先算s2，那么先对上式两侧左乘一个![视觉SLAM十四讲-207](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-207.jpg)，得： 
+已知 R, t，想要求解的是两个特征点的深度 s1, s2。这两个深度是可以分开求的，先算s2，那么先对上式两侧左乘一个![视觉SLAM十四讲-207](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-207.jpg)，得： 
 
-![视觉SLAM十四讲-206](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-206.jpg)
+![视觉SLAM十四讲-206](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-206.jpg)
 
 该式左侧为零，右侧可看成 s2 的一个方程，可以根据它直接求得 s2。有了 s2，s1也可以求出。于是就得到了两个帧下的点的深度，确定了它们的空间坐标。由于噪声的存在，估得的 R, t不一定精确使方程为0，所以更常见的做法求最小二乘解而不是零解。 
 
@@ -2659,7 +2659,7 @@ point reprojected from second frame: [0.04312769812378599, -0.04515455276163744,
 
 三角测量是由平移得到的，有平移才会有对极几何中的三角形，才谈的上三角测量。因此，纯旋转是无法使用三角测量的，因为对极约束将永远满足。在平移存在的情况下，还要关心三角测量的不确定性，这会引出一个三角测量的矛盾。
 
-![视觉SLAM十四讲-208](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-208.jpg)
+![视觉SLAM十四讲-208](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-208.jpg)
 
 如图所示。当平移很小时，像素上的不确定性将导致较大的深度不确定性。也就是说，如果特征点运动一个像素 δx，使得视线角变化了一个角度 δθ，那么测量到深度值将有 δd 的变化。从几何关系可以看到，当 t 较大时，δd 将明显变小，这说明平移较大时， 在同样的相机分辨率下，三角化测量将更精确。对该过程的定量分析可以使用正弦定理得到，但这里先考虑定性分析。 因此，要增加三角化的精度，其一是提高特征点的提取精度，也就是提高图像分辨率 ——但这会导致图像变大，提高计算成本。另一方式是使平移量增大。但是，平移量增大会导致图像的外观发生明显的变化，比如箱子原先被挡住的侧面显示出来了，比如反射光发生变化了，等等。外观变化会使得特征提取与匹配变得困难。总而言之，增大平移，会导致匹配失效；而平移太小，则三角化精度不够——这就是三角化的矛盾。 
 
@@ -2673,21 +2673,21 @@ PnP（Perspective-n-Point）是求解 3D 到 2D 点对运动的方法。它描�
 
 考虑某个空间点 P，它的齐次坐标为 P = (X, Y, Z, 1)T。在图像 I1 中，投影到特征点 x1 = (u1, v1, 1)T（以归一化平面齐次坐标表示）。此时相机的位姿 R, t 是未知的。与单应矩阵的求解类似，定义增广矩阵 [R|t] 为一个 3 × 4 的矩阵，包含了旋转与平移信息。展开形式列写如下：
 
-![视觉SLAM十四讲-209](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-209.jpg)
+![视觉SLAM十四讲-209](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-209.jpg)
 
 用最后一行把 s 消去，得到两个约束： 
 
-![视觉SLAM十四讲-210](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-210.jpg)
+![视觉SLAM十四讲-210](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-210.jpg)
 
 定义 T 的行向量： t1 = (t1, t2, t3, t4) T , t2 = (t5, t6, t7, t8) T , t3 = (t9, t10, t11, t12) T , 于是有：
 
-![视觉SLAM十四讲-211](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-211.jpg)
+![视觉SLAM十四讲-211](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-211.jpg)
 
-![视觉SLAM十四讲-212](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-212.jpg)
+![视觉SLAM十四讲-212](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-212.jpg)
 
 t 是待求的变量，可以看到每个特征点提供了两个关于 t 的线性约束。假设一共有 N 个特征点，可以列出线性方程组： 
 
-![视觉SLAM十四讲-213](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-213.jpg)
+![视觉SLAM十四讲-213](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-213.jpg)
 
 由于 t 一共有 12 维，因此最少通过六对匹配点，即可实现矩阵 T 的线性求解，这种方法称为直接线性变换（Direct Linear Transform，DLT）。当匹配点大于六对时，可以使用 SVD 等方法对超定方程求最小二乘解。 在 DLT 求解中，直接将 T 矩阵看成了 12 个未知数，忽略了它们之间的联系。因为旋转矩阵 R ∈ SO(3)，用 DLT 求出的解不一定满足该约束，它是一个一般矩阵。平移向量属于向量空间。对于旋转矩阵 R，必须针对 DLT 估计的 T 的左边寻找一个最好的旋转矩阵对它进行近似。这可以由 QR 分解完成， 相当于把结果从矩阵空间重新投影到 SE(3) 流形上，转换成旋转和平移两部分。 这里的 x1 使用了归一化平面坐标，去掉了内参矩阵 K 的影响 ——这是因为内参 K 在 SLAM 中通常假设为已知。如果内参未知，也能用 PnP 去估计 K, R, t 三个量。然而由于未知量的增多，效果会差一些。 
 
@@ -2695,27 +2695,27 @@ t 是待求的变量，可以看到每个特征点提供了两个关于 t 的线
 
 P3P仅使用三对匹配点，对数据要求较少，需要利用给定的三个点的几何关系。它的输入数据为三对 3D-2D 匹配点。记 3D 点为 A, B, C，2D 点为 a, b, c，其中小写字母代表的点为大写字母在相机成像平面上的投影，如图所示。
 
-![视觉SLAM十四讲-214](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-214.jpg)
+![视觉SLAM十四讲-214](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-214.jpg)
 
 此外，P3P 还需要使用一对验证点，以从可能的解出选出正确的那一个（类似于对极几何情形）。记验证点对为 D − d，相机光心为 O。注意，预知的是 A, B, C 在世界坐标系中的坐标，而不是在相机坐标系中的坐标。一旦3D 点在相机坐标系下的坐标能够算出，就得到了 3D-3D 的对应点，把 PnP 问题转换为了 ICP 问题。三角形之间存在对应关系： 
 
-![视觉SLAM十四讲-215](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-215.jpg)
+![视觉SLAM十四讲-215](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-215.jpg)
 
 利用余弦定理，有： 
 
-![视觉SLAM十四讲-216](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-217.jpg)
+![视觉SLAM十四讲-216](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-217.jpg)
 
-对上面三式全体除以![视觉SLAM十四讲-218](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-218.jpg),并且记 x = OA/OC, y = OB/OC，得：
+对上面三式全体除以![视觉SLAM十四讲-218](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-218.jpg),并且记 x = OA/OC, y = OB/OC，得：
 
-![视觉SLAM十四讲-219](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-219.jpg)
+![视觉SLAM十四讲-219](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-219.jpg)
 
-记![视觉SLAM十四讲-220](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-220.jpg)
+记![视觉SLAM十四讲-220](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-220.jpg)
 
-有： ![视觉SLAM十四讲-221](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-221.jpg)
+有： ![视觉SLAM十四讲-221](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-221.jpg)
 
-化为：![视觉SLAM十四讲-222](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-222.jpg)
+化为：![视觉SLAM十四讲-222](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-222.jpg)
 
-由于知道 2D 点的图像位置，三个余弦角 cos⟨a, b⟩, cos⟨b, c⟩, cos⟨a, c⟩ 是已知的。同时，![视觉SLAM十四讲-223](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-223.jpg)可以通过 A, B, C 在世界坐标系下的坐标算出，变换到相机坐标系下之后，并不改变这个比值。该式中的 x, y 是未知的，随着相机移动会发生变化。因此，该方程组是关于 x, y 的一个二元二次方程（多项式方程）。解析地求解该方程组是一个复杂的过程，需要用吴消元法。类似于分解 E 的情况，该方程最多可能得到四个解，但可以用验证点来计算最可能的解，得到 A, B, C 在相机坐标系下的 3D 坐标。然后，根据 3D-3D 的点对，计算相机的运动 R, t。
+由于知道 2D 点的图像位置，三个余弦角 cos⟨a, b⟩, cos⟨b, c⟩, cos⟨a, c⟩ 是已知的。同时，![视觉SLAM十四讲-223](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-223.jpg)可以通过 A, B, C 在世界坐标系下的坐标算出，变换到相机坐标系下之后，并不改变这个比值。该式中的 x, y 是未知的，随着相机移动会发生变化。因此，该方程组是关于 x, y 的一个二元二次方程（多项式方程）。解析地求解该方程组是一个复杂的过程，需要用吴消元法。类似于分解 E 的情况，该方程最多可能得到四个解，但可以用验证点来计算最可能的解，得到 A, B, C 在相机坐标系下的 3D 坐标。然后，根据 3D-3D 的点对，计算相机的运动 R, t。
 
 从 P3P 的原理上可以看出，为了求解 PnP，利用了三角形相似性质，求解投影点 a, b, c 在相机坐标系下的 3D 坐标，最后把问题转换成一个 3D 到 3D 的位姿估计问题。
 
@@ -2730,21 +2730,21 @@ P3P 也存在着一些问题：
 
 考虑 n 个三维空间点 P 和它们的投影 p，希望计算相机的位姿 R, t，它的李代数表示为 ξ。假设某空间点坐标为 Pi = [Xi , Yi , Zi ]T，其投影的像素坐标为 ui = [ui , vi ]T。 像素位置与空间点位置的关系如下：
 
-![视觉SLAM十四讲-225](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-225.jpg)
+![视觉SLAM十四讲-225](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-225.jpg)
 
 写成矩阵形式是：
 
-![视觉SLAM十四讲-226](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-226.jpg)
+![视觉SLAM十四讲-226](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-226.jpg)
 
 中间隐含着齐次坐标到非齐次的转换，否则按矩阵的乘法来说，维度是不对的。因为exp (ξ∧) Pi 结果是 4 × 1 的，而它左侧的 K 是 3 × 3 的，所以必须把 exp (ξ ∧) Pi 的前三维取出来，变成三维的非齐次坐标。 现在，由于相机位姿未知以及观测点的噪声，该等式存在一个误差。因此把误差求和，构建最小二乘问题，然后寻找最好的相机位姿，使它最小化：
 
-![视觉SLAM十四讲-227](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-227.jpg)
+![视觉SLAM十四讲-227](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-227.jpg)
 
 该问题的误差项，是将像素坐标（观测到的投影位置）与 3D 点按照当前估计的位姿进行投影得到的位置相比较得到的误差，所以称之为重投影误差。使用齐次坐标时，这个误差有 3 维。不过，由于u最后一维为 1，该维度的误差一直为零，因而更多时候使用非齐次坐标，于是误差就只有 2 维了。
 
 如图所示，通过特征匹配，知道了 p1 和 p2 是同一个空间点 P 的投影，但是不知道相机的位姿。在初始值中，P 的投影 pˆ2 与实际的 p2 之间有一定的距离。于是调整相机的位姿，使得这个距离变小。不过，由于这个调整需要考虑很多个点，所以最后每个点的误差通常都不会精确为零。
 
-![视觉SLAM十四讲-228](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-228.jpg)
+![视觉SLAM十四讲-228](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-228.jpg)
 
 使用李代数，可以构建无约束的优化问题， 很方便地通过 G-N, L-M 等优化算法进行求解。不过，在使用 G-N 和 L-M 之前，需要知道每个误差项关于优化变量的导数，也就是线性化： e(x + ∆x) ≈ e(x) + J∆x. 
 
@@ -2756,43 +2756,43 @@ P3P 也存在着一些问题：
 
 相机投影模型相对于P′则为： su = KP′ 
 
-展开：![视觉SLAM十四讲-229](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-229.jpg)
+展开：![视觉SLAM十四讲-229](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-229.jpg)
 
 利用第 3 行消去 s（实际上就是 P′ 的距离），得：
 
-![视觉SLAM十四讲-230](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-230.jpg)
+![视觉SLAM十四讲-230](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-230.jpg)
 
 这与相机模型是一致的。当求误差时，可以把这里的 u, v 与实际的测量值比较，求差。定义了中间变量后对 ξ∧左乘扰动量δξ，然后考虑 e 的变化关于扰动量的导数。利用链式法则，可以列写如下：
 
-![视觉SLAM十四讲-231](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-231.jpg)
+![视觉SLAM十四讲-231](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-231.jpg)
 
 这里的⊕指李代数上的左乘扰动。第一项是误差关于投影点的导数，得：
 
-![视觉SLAM十四讲-232](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-232.jpg)
+![视觉SLAM十四讲-232](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-232.jpg)
 
 第二项为变换后的点关于李代数的导数，得：
 
-![视觉SLAM十四讲-233](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-233.jpg)
+![视觉SLAM十四讲-233](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-233.jpg)
 
 而在 P′ 的定义中，取出了前三维，于是得：
 
-![视觉SLAM十四讲-234](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-234.jpg)
+![视觉SLAM十四讲-234](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-234.jpg)
 
 将这两项相乘，就得到了 2 × 6 的雅可比矩阵：
 
-![视觉SLAM十四讲-235](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-235.jpg)
+![视觉SLAM十四讲-235](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-235.jpg)
 
 这个雅可比矩阵描述了重投影误差关于相机位姿李代数的一阶变化关系。保留了前面的负号，因为这是由于误差是由观测值减预测值定义的。它当然也可反过来，定义成 “预测减观测”的形式。在这种情况下，只要去掉前面的负号即可。此外，如果 se(3) 的定义方式是旋转在前，平移在后时，只要把这个矩阵的前三列与后三列对调即可。 
 
 另一方面，除了优化位姿，还希望优化特征点的空间位置。因此，需要讨论 e 关于空间点 P 的导数。仍利用链式法则，有：
 
-![视觉SLAM十四讲-236](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-236.jpg)
+![视觉SLAM十四讲-236](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-236.jpg)
 
 第二项，按照定义 P′ = exp(ξ∧)P = RP + t. 
 
 发现 P′ 对 P 求导后只剩下 R。于是:
 
-![视觉SLAM十四讲-237](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-237.jpg)
+![视觉SLAM十四讲-237](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-237.jpg)
 
 以上是观测相机方程关于相机位姿与特征点的两个导数矩阵。它们能够在优化过程中提供重要的梯度方向，指导优化的迭代。 
 
@@ -2810,7 +2810,7 @@ P3P 也存在着一些问题：
 
 使用前一步的估计值作为初始值，把问题建模成一个最小二乘的图优化问题，如图所示。
 
-![视觉SLAM十四讲-224](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-224.jpg)在这个图优化中，节点和边的选择为： 
+![视觉SLAM十四讲-224](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-224.jpg)在这个图优化中，节点和边的选择为： 
 
 1. 节点：第二个相机的位姿节点 ξ ∈ se(3)，以及所有特征点的空间位置 P ∈ R3。 
 2. 边：每个 3D 点在第二个相机中的投影，以观测方程来描述： zj = h(ξ, Pj ). 
@@ -2905,11 +2905,11 @@ Bundle Adjustment 是一种通用的做法。它可以不限于两个图像。�
 
 假设有一组配对好的 3D 点（比如对两幅 RGB-D 图像进行了匹配）： 
 
-![视觉SLAM十四讲-238](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-238.jpg)
+![视觉SLAM十四讲-238](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-238.jpg)
 
 想要找一个欧氏变换 R, t，使得：
 
-![视觉SLAM十四讲-239](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-239.jpg)
+![视觉SLAM十四讲-239](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-239.jpg)
 
 这个问题可以用迭代最近点（Iterative Closest Point，ICP）求解。3D−3D 位姿估计问题和相机模型并没有关系。在激光 SLAM 中也会碰到 ICP，不过由于激光数据特征不够丰富，无从知道两个点集之间的匹配关系，只能认为距离最近的两个点为同一个，所以这个方法称为迭代最近点。而在视觉中，特征点提供了较好的匹配关系，所以整个问题就变得更简单了。在 RGB-D SLAM 中， 可以用这种方式估计相机位姿。ICP 的求解也分为两种方式：利用线性代数的求解（主要是 SVD），以及利用非线性优化方式的求解（类似于 Bundle Adjustment）。
 
@@ -2917,27 +2917,27 @@ Bundle Adjustment 是一种通用的做法。它可以不限于两个图像。�
 
 定义第 i 对点的误差项：
 
-![视觉SLAM十四讲-240](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-240.jpg)
+![视觉SLAM十四讲-240](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-240.jpg)
 
 然后构建最小二乘问题，求使误差平方和达到极小的R, t：
 
-![视觉SLAM十四讲-241](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-241.jpg)
+![视觉SLAM十四讲-241](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-241.jpg)
 
 求解:
 
 首先，定义两组点的质心：
 
-![视觉SLAM十四讲-242](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-242.jpg)
+![视觉SLAM十四讲-242](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-242.jpg)
 
 随后，在误差函数中做如下的处理：
 
-![视觉SLAM十四讲-243](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-243.jpg)
+![视觉SLAM十四讲-243](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-243.jpg)
 
-交叉项部分中![视觉SLAM十四讲-244](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-244.jpg)
+交叉项部分中![视觉SLAM十四讲-244](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-244.jpg)
 
 在求和之后为零，因此优化目标函数可以简化为
 
-![视觉SLAM十四讲-245](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-245.jpg)
+![视觉SLAM十四讲-245](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-245.jpg)
 
 左边只和旋转矩阵 R 相关，而右边既有 R 也有 t，但只和质心相关。只要获得了R，令第二项为零就能得到 t。
 
@@ -2945,11 +2945,11 @@ Bundle Adjustment 是一种通用的做法。它可以不限于两个图像。�
 
 1. 计算两组点的质心位置 p, p′，然后计算每个点的去质心坐标：
 
-![视觉SLAM十四讲-246](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-246.jpg)
+![视觉SLAM十四讲-246](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-246.jpg)
 
 2. 根据以下优化问题计算旋转矩阵：
 
-![视觉SLAM十四讲-247](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-247.jpg)
+![视觉SLAM十四讲-247](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-247.jpg)
 
 3. 根据第 2 步的 R 计算 t： t∗ = p − Rp′ 
 
@@ -2957,17 +2957,17 @@ Bundle Adjustment 是一种通用的做法。它可以不限于两个图像。�
 
 展开关于 R 的误差项，得： 
 
-![视觉SLAM十四讲-248](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-248.jpg)
+![视觉SLAM十四讲-248](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-248.jpg)
 
 第一项和 R 无关，第二项由于 RTR = I，也与 R 无关。因此实际上优化目标函数变为
 
-![视觉SLAM十四讲-249](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-249.jpg)
+![视觉SLAM十四讲-249](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-249.jpg)
 
 下面通过 SVD 解出上述问题中最优的 R：
 
 先定义矩阵： 
 
-![视觉SLAM十四讲-250](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-250.jpg)
+![视觉SLAM十四讲-250](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-250.jpg)
 
 W 是一个 3 × 3 的矩阵，对 W 进行 SVD 分解，得： W = UΣVT
 
@@ -2979,11 +2979,11 @@ W 是一个 3 × 3 的矩阵，对 W 进行 SVD 分解，得： W = UΣVT
 
 以李代数表达位姿时，目标函数可以写成
 
-![视觉SLAM十四讲-251](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-251.jpg)
+![视觉SLAM十四讲-251](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-251.jpg)
 
 使用李代数扰动模型：
 
-![视觉SLAM十四讲-252](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/pic/视觉SLAM十四讲-252.jpg)
+![视觉SLAM十四讲-252](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲-252.jpg)
 
 在非线性优化中只需不断迭代，就能找到极小值。ICP 问题存在唯一 解或无穷多解的情况。在唯一解的情况下，只要能找到极小值解，那么这个极小值就是全局最优值，不会遇到局部极小的情况。这意味着已匹配点时求解 ICP可以任意选定初始值。
 
