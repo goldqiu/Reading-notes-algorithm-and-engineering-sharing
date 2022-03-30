@@ -1,6 +1,3 @@
-# Reading-notes-algorithm-and-engineering-sharing
-读书笔记、算法和工程分享
-
 ## 视觉SLAM十四讲-专栏汇总
 
 [goldqiu：视觉SLAM十四讲学习笔记-第一讲](https://zhuanlan.zhihu.com/p/424175389)
