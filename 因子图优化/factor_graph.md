@@ -12,19 +12,19 @@ Factor graph model in robotics
 
 在讲因子图的具体模型之前，首先先定义一个简单的机器人问题（SLAM）。
 
-![因子图1](.\图片\因子图1.jpg)
+![因子图1](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图1.jpg)
 
 在样例中，假设有一个机器人在往前运动，过程中能观察到两个路标点，定义了三个时间，三个时间中有路标点的观测量和机器人自己运动的估计量（轮速计）
 
 用贝叶斯网络（Bayes Net）来描述SLAM建模问题（因子图）。
 
-![因子图2](.\图片\因子图2.jpg)
+![因子图2](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图2.jpg)
 
 在贝叶斯网络中有一些变量，这些变量通过有向的边来连接。图中定义了两类四种变量。蓝色是路标节点的变量，黄色是机器人的状态变量，都属于状态变量。红色是机器人对路标点的观测，绿色是机器人对自己运动的观测，都属于第二类变量-观测变量。这个贝叶斯网络实际上描述了状态变量和观测变量联合的概率模型。
 
 概率模型的定义是假设知道了系统的状态变量（机器人所在位置、路标点所在位置），可以推测出得到的观测量是什么（因为观测量是通过某些传感器得到的，而传感器是有已知模型的，可以通过数据手册得到），即已知机器人的状态量和传感器的模型，就可以推算出机器人观测量。
 
-![因子图3](.\图片\因子图3.jpg)
+![因子图3](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图3.jpg)
 
 在公式中，用X来表示机器人状态量，用Z来表示观测量。
 
@@ -38,23 +38,23 @@ Factor graph model in robotics
 
 因子图是一类reference model （网络）。同样应用贝叶斯定律（Bayes rule），给定Z，求解X的概率正比于给定X,求解Z的概率(生成模型)
 
-![因子图4](.\图片\因子图4.jpg)
+![因子图4](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图4.jpg)
 
 分母的Z先验值是跟X无关的(相互独立)，可以省略。
 
 对于求解的状态估计问题，就是给定系统观测量，求解系统状态量，使得条件概率最大。
 
-![因子图5](.\图片\因子图5.jpg)
+![因子图5](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图5.jpg)
 
 就是求解MAP（最大后验分布 maximum posterior inference）， 公式中右边项的X是先验概率（prior），一般是上一帧的最优后验概率，P(Z|X)是似然概率（likelihood，由传感器模型给定） ，左边就是后验概率。
 
 每一个观测变量在贝叶斯网络里都是单独求解的（相互独立），所以所有的条件概率是乘积的形式，且可分解，在因子图里面，分解的每一个项就是一个因子，乘积乘在一起用图的形式来描述就是因子图。
 
-![因子图6](.\图片\因子图6.jpg)
+![因子图6](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图6.jpg)
 
 Modeling a SLAM Problem by a Factor Graph
 
-![因子图7](.\图片\因子图7.jpg)
+![因子图7](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图7.jpg)
 
 因子图里面包括两类节点和边
 
@@ -64,11 +64,11 @@ Modeling a SLAM Problem by a Factor Graph
 
 因子图里面还会包括一个先验因子（prior factor），就是公式中X的先验值(先验概率)，用来固定整个系统的解（避免数值多解，达到数值可解 ）。
 
-![因子图8](.\图片\因子图8.jpg)
+![因子图8](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图8.jpg)
 
 整个因子图实际上就是每个因子单独的乘积。红色对应观测量因子，绿色对应状态量之间的因子（轮速），紫色是先验因子。求解因子图就是将这些因子乘起来，求一个最大值，得到的系统状态就是概率上最可能的系统状态。
 
-![因子图9](.\图片\因子图9.jpg)
+![因子图9](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图9.jpg)
 
 实际上，每个因子都是用指数函数来定义的，因为每一个因子描述的是一个观测变量（IMU或者相机），根据中心极限定理，绝大多数传感器的噪音是符合高斯分布的(所以选择指数函数），指数函数对应了error function，包括两个部分：系统状态量和观测量，error function实际上表示的是用状态量去推测的观测量与实际观测量的区别。
 
@@ -84,7 +84,7 @@ error是越小越好的，这说明观测值和预测值是接近的。
 
 对定义的因子图乘起来的函数，希望能够最大化，假设所有因子都是指数函数形式，对函数取负对数，则指数函数最大化问题实际上等于一个非线性最小二乘问题。
 
-![因子图10](.\图片\因子图10.jpg)
+![因子图10](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图10.jpg)
 
 那么就是给定一个因子图的情况下，如何求解因子图（通过非线性最小二乘），常用方法是迭代法，如高斯牛顿。
 
@@ -94,27 +94,27 @@ Solve factor graph by solving non-linear least squares
 
 给定一个初始值，通过某种办法或猜测一组可能的系统状态变量，去求解一个修改量（dx），让最小二乘值尽可能变小，求出dx再加上原来的x（修改了初始值），再代回原来的函数，迭代iteration调整初始值，达到一定的停止条件后，求出最优的一个修改值。
 
-![因子图11](.\图片\因子图11.jpg)
+![因子图11](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图11.jpg)
 
 中间步骤每一步求解增量是通过线性化来做（对非线性函数做一阶泰勒展开Taylor expansion），得到线性最小二乘问题linear least square。
 
-![因子图12](.\图片\因子图12.jpg)
+![因子图12](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图12.jpg)
 
 有两个方法:一可以直接求解，二可以通过normal equation来求解（常见）
 
-![因子图13](.\图片\因子图13.jpg)
+![因子图13](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图13.jpg)
 
-![因子图14](.\图片\因子图14.jpg)
+![因子图14](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图14.jpg)
 
 JtJ矩阵是正定矩阵（Jacobian满足列满秩column full rank），做Cholesky分解（Cholesky factorization）， 将JtJ分解成RtR，而R是上三角阵，比较简单，实际上是求解两个上三角阵的线性方程组。
 
-![因子图15](.\图片\因子图15.jpg)
+![因子图15](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图15.jpg)
 
 对于直接求解，通过QR分解，如果给定只有J，不计算Jt，对J进行QR分解，可以直接求解出R。
 
 QR分解的速度会慢一些，但Cholesky分解的数值稳定性要差，一般是要根据所求解系统的性质来决定。
 
-![因子图16](.\图片\因子图16.jpg)
+![因子图16](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图16.jpg)
 
 通过SLAM案例：对于Jacobian矩阵，每一行（block行）对应的是一个因子，比如说紫色部分表示的是prior因子，绿色表示的是odometry因子，红色表示路标点观测因子。紫色一行只有一个(只在X1有非零项)是因为先验因子只影响了一个状态（X1）, 同样对应里程计因子，只有X1和X2有连接，在J矩阵中第二行只有X1,X2有非零项。 
 
@@ -138,11 +138,11 @@ J矩阵具有稀疏的性质，因为每一个观测量相关的系统状态量�
 
 isam1实际上做的就是增量QR分解(Incremental QR Factorization)， 给定一个J矩阵，可以分解成Q和R，假设因子图其他都不变，之前的因子图还在，加了一些新的东西，每一个因子对应的是J矩阵的每一行，所以新加了几个因子，就是在J矩阵增加了几行，如果在已知分解出来的QR的情况下，J加了几行，如何快速算出R矩阵。
 
-![因子图17](.\图片\因子图17.jpg)
+![因子图17](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图17.jpg)
 
 ISAM1论文给的公式，A就是图中的J，如果A矩阵下面加一行（Wt），左边乘一个扩展的正交矩阵，右下角标一个1，就能够将增量的那一行加到R项。通过这个就能够将增量QR分解转化成增量三角化R的问题，就是如果在R下面加了几列，如何将矩阵重新变成三角阵（通过正交阵）。
 
-![因子图18](.\图片\因子图18.jpg)
+![因子图18](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图18.jpg)
 
 通过given rotation的办法：如果在R矩阵的下一列加了一个非零元素，左乘given旋转矩阵，可以将非零元素变成零元素，对应的代价是左乘后的矩阵0后面加了一些非零元素。（By applying multiple Givens rotation can re-triangulate the R matrix）
 
@@ -174,11 +174,11 @@ minisam：目前还没有自动求导
 
 给定最简单的位姿图，有5个节点，有回环，里程计
 
-![因子图19](.\图片\因子图19.jpg)
+![因子图19](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图19.jpg)
 
 第一步，建因子图，首先要定义传感器的噪音模型，因为每一个因子对应的是观测的量，概率模型是传感器概率模型来定的。
 
-![因子图21](.\图片\因子图21.jpg)
+![因子图21](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图21.jpg)
 
 Define the error distribution (measurements noise model)：
 
@@ -190,7 +190,7 @@ Robust models (Huber, Cauchy, etc.)
 
 具体编写：graph是一个容器，容器中加了先验的因子，构建每个因子过程中，有三项主要输入，
 
-![因子图22](.\图片\因子图22.jpg)
+![因子图22](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图22.jpg)
 
 第一项是所连的状态量，表示办法是key（一个数字加一个字符），第二个是观测量，传感器实际给出的（A measurement, for 2D pose is a SE(2)）。
 
@@ -200,21 +200,21 @@ Robust models (Huber, Cauchy, etc.)
 
 对于里程计因子：比如X2 - X1- Z，即实际的里程计值减去观测的里程计值。
 
-![因子图23](.\图片\因子图23.jpg)
+![因子图23](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图23.jpg)
 
-![因子图20](.\图片\因子图20.jpg)
+![因子图20](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图20.jpg)
 
 第二步还要给变量初始化值（Add Initial Values of Variables），因为用的是迭代法求解，最重要的是有初始值， 在minisam中有一个容器存储， 告诉变量需要从这个值开始求解。
 
-![因子图24](.\图片\因子图24.jpg)
+![因子图24](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图24.jpg)
 
 第三步：选择非线性最小二乘求解器（Gauss-Newton Levenberg-Marquardt Dogleg），还有线性求解器，如QR分解、Cholesky。
 
-![因子图25](.\图片\因子图25.jpg)
+![因子图25](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图25.jpg)
 
 考虑新的传感器，相机、雷达，自定义传感器模型。自定义因子如何做？
 
-![因子图26](.\图片\因子图26.jpg)
+![因子图26](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图26.jpg)
 
 定义一个类，定义error function，输入是系统状态（给定系统状态），返回误差值。
 
@@ -254,11 +254,11 @@ IMU by pre-integrated IMU factor
 
 给定两个三维重建，找某个空间中的三维点，用图像特征点匹配的方法，将两个三维重建的三维点进行匹配，匹配后只剩下一个点，就是空间中同个三维点，为公共的目标点，通过这种办法将两个目标点合并成一个点， 变成公共的因子，就将两个三维重建合并为一个四维重建，类推可以建立出大的四维重建，对因子图进行整体优化， 通过公共的坐标点将所有的三维重建限制在了一个坐标系下。三维重建中例如ICP点云匹配是有误差的，每一组点云都会有误差，直接匹配的话是会匹配不上甚至有变形的， 如果去做四维重建的话，因为有对应的公共路标点去约束，再去做四维重建， 也会有误差，只是通过公共路标点的限制下误差是相同的，因为是在公用的大的因子图里面去优化，得到的误差也是一样的。（Data association is performed by image matching, then find matched landmark in each 3D reconstruction，Matched landmarks are identified as the same landmarks, which are unchanged 3D structures cross sessions，By merging shared landmarks, two 3D reconstructions can be merged as a single one）
 
-![因子图27](.\图片\因子图27.jpg)
+![因子图27](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图27.jpg)
 
 四维重建帮助农作物进行可视化，是非常明显的。
 
-![因子图28](.\图片\因子图28.jpg)
+![因子图28](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图28.jpg)
 
 第二个案例，运动规划。motion planning in robotics
 
@@ -266,7 +266,7 @@ IMU by pre-integrated IMU factor
 
 运动规划问题：有一个机器人在有障碍物的环境里，知道初始位置和障碍物，希望到达一个位置，找到一个轨迹（避开所有障碍物），但并不是在线做规避，是用优化或采样的办法提前给出轨迹。
 
-![因子图29](.\图片\因子图29.jpg)
+![因子图29](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图29.jpg)
 
 轨迹特点和要求：1.不能跟障碍物有碰撞，feasibility
 
@@ -280,7 +280,7 @@ IMU by pre-integrated IMU factor
 
 MAP最大后验分布包括两部分，prior 分布（先验）（对应第二个要求，最优，尽可能平滑enforce smoothness），似然分布Collision-free likelihood:（第一个要求，不能有碰撞，enforce feasibility，相当于SLAM里面的观测量，就是没有碰撞的概率尽可能高）
 
-![因子图30](.\图片\因子图30.jpg)
+![因子图30](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图30.jpg)
 
 乘起来求解最优化问题，就是求解运动规划问题。即希望离障碍物越远，碰撞的概率越低。 
 
@@ -294,7 +294,7 @@ MAP最大后验分布包括两部分，prior 分布（先验）（对应第二�
 
 对于每一个时间状态，每一个时间节点计算与环境中碰撞的概率，两个节点间计算加速度最小高斯过程先验值，加起来就是大的因子图去优化，得到的就是最优的没有碰撞的轨迹。
 
-![因子图31](.\图片\因子图31.jpg)
+![因子图31](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图31.jpg)
 
 优化办法常遇到的问题是success rate（遇到局部最低值（最优），很难前进到全局最优，很常卡在一个有碰撞的地方，这个时候就优化失败了）
 
@@ -302,7 +302,7 @@ MAP最大后验分布包括两部分，prior 分布（先验）（对应第二�
 
 扩展：如何将增量扩展应用到重规划Replanning的问题中， 假设有初始位置和目标位置，规划了一个轨迹，执行到中间，换了目标位置，需要重新做轨迹的规划（重新做优化 given current state and a new goal），如果将这个问题构建成因子图的话，重规划的问题相当于只改变了两个因子， 包括目标节点因子和当前状态的因子（加一个当前状态的约束，作为先验），其他因子不需要变，实际上优化的是变化量非常小的一个图，给使用增量因子图推理很大的空间，如果用isam处理少量变化的图，比从0计算后半段的图效率更高。用贝叶斯树的办法， 如果只改变最后的节点和加一个当前位置的约束，贝叶斯树只是少量的变化， 需要改变的位置越靠后，需要重新规划的轨迹越短，贝叶斯树改变的越少，计算量越低。因子图只有少量的变化，增量规划可以获得大的提升。
 
-![因子图32](.\图片\因子图32.jpg)
+![因子图32](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图32.jpg)
 
 答疑：
 
@@ -428,13 +428,13 @@ ubuntu下安装matlab，安装好后根据GTSAM安装路径配置toolbox（使�
 
 测试test_gtsam出现以下则成功：
 
-![因子图33](.\图片\因子图33.png)
+![因子图33](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图33.png)
 
 下载demo程序：https://github.com/dongjing3309/gtsam-examples
 
 运行如下：
 
-![因子图34](.\图片\因子图34.png)
+![因子图34](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E5%9B%A0%E5%AD%90%E5%9B%BE%E4%BC%98%E5%8C%96/%E5%9B%BE%E7%89%87\因子图34.png)
 
 
 
