@@ -78,3 +78,24 @@
 [goldqiu：四.因子图优化学习---对因子图优化的粗浅理解](https://zhuanlan.zhihu.com/p/462745031)
 
 整理并分享因子图优化，欢迎大家指正。
+
+
+
+## 开发记录
+
+**专栏汇总**
+
+[goldqiu：一.开发记录之AHRS、惯导传感器SBG-Ellipse-N传感器配置和使用](https://zhuanlan.zhihu.com/p/428987888)
+
+[goldqiu：二.开发记录之派勤工控机远程使用和ubuntu和ROS环境配置](https://zhuanlan.zhihu.com/p/430776138)
+
+[goldqiu：三.开发记录之移动硬盘装ubuntu系统的配置、环境、各类软件安装和备份等](https://zhuanlan.zhihu.com/p/432915999)
+
+[goldqiu：四.开发记录之ubuntu系统安装ROS和开发环境](https://zhuanlan.zhihu.com/p/433535056)
+
+[goldqiu：五.开发记录之ubuntu系统安装各个软件](https://zhuanlan.zhihu.com/p/455801206)
+
+整理并分享在实验室科研和开发过程中遇到的问题，记录下来分享，欢迎大家指正。
+
+
+
