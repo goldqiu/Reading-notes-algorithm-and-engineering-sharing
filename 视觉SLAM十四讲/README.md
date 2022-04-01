@@ -49,3 +49,11 @@
 [goldqiu：视觉SLAM十四讲学习笔记-第七讲-视觉里程计-ICP和实践](https://zhuanlan.zhihu.com/p/478427307)
 
 2021年10月开始空余时间看高翔博士的视觉SLAM十四讲，并做一些笔记，分享如上，欢迎大家指正。
+
+
+
+### 笔记
+
+[视觉SLAM十四讲笔记](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲学习.md)
+
+[视觉SLAM十四讲总结](https://github.com/goldqiu/Reading-notes-algorithm-and-engineering-sharing/tree/main/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2/视觉SLAM十四讲总结.md)
