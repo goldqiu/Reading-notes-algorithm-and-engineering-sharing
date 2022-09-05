@@ -59,6 +59,8 @@
 
 [goldqiu：视觉SLAM十四讲学习笔记-第七讲-视觉里程计-ICP和实践](https://zhuanlan.zhihu.com/p/478427307)
 
+[goldqiu：视觉SLAM十四讲学习笔记--第七讲视觉里程计学习笔记总结（1）](https://zhuanlan.zhihu.com/p/478461636)
+
 2021年10月开始空余时间看高翔博士的视觉SLAM十四讲，并做一些笔记，分享如上，欢迎大家指正。
 
 ## 因子图优化
