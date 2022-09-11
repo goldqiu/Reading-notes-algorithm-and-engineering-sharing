@@ -97,7 +97,13 @@
 
 [goldqiu：五.开发记录之ubuntu系统安装各个软件](https://zhuanlan.zhihu.com/p/455801206)
 
+[goldqiu：六.开发记录之实验室服务器LXD部署](https://zhuanlan.zhihu.com/p/526428198)
+
 整理并分享在实验室科研和开发过程中遇到的问题，记录下来分享，欢迎大家指正。
 
 
+
+### 科研工具
+
+[goldqiu：一.科研记录：论文编写之工具记录](https://zhuanlan.zhihu.com/p/430779602)
 
